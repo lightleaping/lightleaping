@@ -17,7 +17,7 @@
 
 ## Project Map
 
-<img src="./assets/manufacturing_ai_project_map.svg" alt="Manufacturing AI Project Map" width="100%">
+<img src="./assets/ai_project_map_compact.svg" alt="AI Project Map" width="100%">
 
 ---
 
@@ -26,12 +26,12 @@
 | 공고 핵심 | 프로젝트에서 보여주는 근거 |
 |---|---|
 | **Vision** | ResNet18 이미지 분류 · Faster R-CNN 객체 탐지 · OpenCV · 오분류 및 Detection 실패 분석 |
-| **Time Series / Data** | RNN·LSTM 기본 구조 학습 · 센서 AutoEncoder 이상 탐지 · 설비 상태 Feature 기반 고장 예측 |
-| **NLP** | 제조 질문 Intent·Router·Tool·Evidence · BM25/Dense Retrieval · Section Boost |
+| **Time Series / Data** | RNN·LSTM 기본 구조 학습 · 센서 이상 탐지 파이프라인 · 설비 상태 Feature 기반 고장 위험 예측 |
+| **NLP** | 제조 질문 Intent·Router·Tool·Evidence · BM25/Dense Retrieval · 논문 텍스트·키워드 분석 |
 | **AI Service Solution** | PyTorch Model → FastAPI → Streamlit·SQLite · 입력 검증 · API·통합 테스트 |
 
 > **주요 개발 언어와 프레임워크:** Python · PyTorch · FastAPI  
-> **평가 방식:** Accuracy · Precision · Recall · F1 · mAP · IoU · Confusion Matrix · 실패 사례 분석
+> **검증 방식:** 프로젝트 성격에 따라 모델 지표, 검색 결과 규칙, API 응답, 실패 사례와 한계를 구분해 확인합니다.
 
 ---
 
@@ -60,7 +60,7 @@
 
 | 구분 | 내용 |
 |---|---|
-| **Problem** | 고장 Class가 약 3.4%인 불균형 데이터에서는 Accuracy만으로 고장 탐지 성능을 판단하기 어렵고, 예측 확률만으로는 판단 과정과 입력 특성의 영향을 확인하기 어려웠습니다. |
+| **Problem** | 고장 Class가 약 3.4%인 불균형 데이터에서는 Accuracy만으로 성능을 판단하기 어렵고, 예측 확률만으로는 판단 과정과 입력 특성의 영향을 확인하기 어려웠습니다. |
 | **Implementation** | PyTorch MLP에 `pos_weight`, StandardScaler와 Threshold 비교를 적용했습니다. Prediction·Rule·SHAP Evidence, LangGraph Workflow, Trace와 SQLite History를 FastAPI·Streamlit으로 연결했습니다. |
 | **Evaluation** | **Recall 82.35% · Precision 30.60% · F1 44.62%** · Agent Evaluation **6/6 PASS** |
 | **Project Info** | **2026.05–2026.07 · 개인 프로젝트** · 데이터 전처리·모델·Agent·Evidence·API·Dashboard·평가·문서화 전반 |
@@ -84,20 +84,18 @@
 
 ---
 
-## 04 · 다변량 센서 이상 탐지
+## 04 · 다변량 센서 이상 탐지 파이프라인
 
 [![Repository](https://img.shields.io/badge/Repository-151F32?style=flat-square&logo=github&logoColor=white)](https://github.com/lightleaping/sensor-anomaly-model-pipeline)
 ![Sensor](https://img.shields.io/badge/Sensor_Data-3561D8?style=flat-square)
-![AutoEncoder](https://img.shields.io/badge/AutoEncoder-21AFC4?style=flat-square)
+![Pipeline](https://img.shields.io/badge/Training_%26_Inference_Pipeline-21AFC4?style=flat-square)
 
 | 구분 | 내용 |
 |---|---|
-| **Problem** | 여러 센서값을 개별 임계값으로만 판단하면 변수 간 정상 패턴에서 벗어난 상태를 하나의 이상 점수로 확인하기 어렵습니다. |
-| **Implementation** | 온도·진동·압력·습도 데이터를 전처리하고 정상 데이터로 AutoEncoder를 학습했습니다. Validation Reconstruction Error의 95 Percentile로 Threshold를 정하고 CLI와 FastAPI 추론으로 연결했습니다. |
-| **Evaluation** | Accuracy·Precision·Recall·F1·Confusion Matrix 평가 · 샘플 이상 데이터 **Recall 1.0** |
-| **Project Info** | **개인 프로젝트** · 데이터 생성·전처리·학습·Threshold·평가·CLI·API·문서화 전반 |
-
-> 샘플·합성 데이터 기반 결과이며 실제 설비의 시간 순서, Noise, Drift와 운영 비용을 반영한 성능으로 표현하지 않습니다.
+| **Problem** | 온도·진동·압력·습도처럼 Scale이 다른 센서 입력을 동일한 전처리와 판별 흐름으로 연결할 필요가 있었습니다. |
+| **Implementation** | 데이터 생성·결측치 처리·Split·StandardScaler, 4→8→2→8→4 AutoEncoder, MSE 학습 Loop, Reconstruction Error·Threshold 평가, CLI와 FastAPI 구조를 구현했습니다. |
+| **Verification** | 공개 저장소에서 학습·평가 코드는 확인되지만 저장된 Model·학습 History·평가 Artifact는 확인되지 않아, **실행 완료 성능이 아닌 파이프라인 구현 경험**으로 표시합니다. |
+| **Project Info** | **개인 프로젝트** · 데이터·모델 구조·학습·평가·추론 코드를 연결한 파이프라인 구현 |
 
 ---
 
@@ -116,22 +114,34 @@
 
 ---
 
-## Development Approach
+## 06 · 임상 의학 논문 NLP 동향 분석
 
-| 01 · DATA | 02 · MODEL | 03 · VERIFY | 04 · SERVICE |
-|---|---|---|---|
-| 구조·분포·품질·Split 확인 | Baseline 이후 개선 모델 비교 | 지표·오분류·실패 사례와 한계 확인 | API·화면·입력 검증·테스트 연결 |
+![Academic Project](https://img.shields.io/badge/Academic_Team_Project-3561D8?style=flat-square)
+![NLP Case Study](https://img.shields.io/badge/NLP_Case_Study-151F32?style=flat-square)
+![Documentation Only](https://img.shields.io/badge/Documentation--only-5F6675?style=flat-square)
 
-```text
-문제와 필요성 정의
-→ 데이터 분석
-→ Baseline 구현
-→ 개선 모델 비교
-→ 정량 평가
-→ 실패 사례 분석
-→ FastAPI와 사용자 화면 연결
-→ 테스트와 문서화
-```
+| 구분 | 내용 |
+|---|---|
+| **Problem** | 많은 임상 의학 기술 발전 관련 논문에서 반복적으로 등장하는 주제와 기술 흐름을 정리할 필요가 있었습니다. |
+| **Implementation** | 논문 자료를 수집하고 텍스트를 정리해 주요 키워드와 기술 동향을 분석한 뒤 팀 보고서로 구성했습니다. |
+| **Evaluation** | 정량 모델 성능이 아니라 수집 자료·키워드·동향 해석과 보고서 결과를 중심으로 검토했습니다. |
+| **Project Info** | **전공 팀 프로젝트** · 자료 수집·텍스트 정리·분석·보고서 작성 |
+| **공개 범위** | 당시 Source·Dataset·정량 평가 자료가 보관되어 있지 않아 실행 가능한 NLP 시스템이 아닌 **Documentation-only Case Study**로 표시합니다. |
+
+---
+
+## Project Work Principles
+
+모든 프로젝트에 동일한 모델 개발 절차를 적용했다고 주장하지 않습니다.  
+대신 프로젝트의 성격에 맞춰 다음 정보를 일관되게 남깁니다.
+
+| 기준 | 확인 내용 |
+|---|---|
+| **Problem & Scope** | 왜 필요한지, 일정 안에서 어디까지 구현했는지 |
+| **My Role** | 데이터·모델·검색·Agent·API·협업 중 직접 담당한 범위 |
+| **Evidence** | 모델 지표, 검색 규칙, API 응답, 테스트 또는 보고서 등 프로젝트에 맞는 결과 |
+| **Limitations** | 미구현 기능, 남은 오류, Source·Artifact 보존 여부 |
+| **Delivery** | Repository·README·구조도·실행 방법·결과 자료가 있는 범위 |
 
 ---
 
@@ -154,7 +164,7 @@
 | **Language / Data** | Python · SQL · pandas · NumPy · scikit-learn |
 | **AI / Deep Learning** | PyTorch · torchvision · CNN · ResNet18 · Faster R-CNN · MLP · AutoEncoder |
 | **Vision** | Image Classification · Object Detection · OpenCV · Grad-CAM |
-| **NLP / Agent** | Intent Classification · Router · Tool · Evidence · LangGraph · MCP · OpenAI API |
+| **NLP / Agent** | Text Processing · Keyword Analysis · Intent · Router · Tool · Evidence · LangGraph · MCP |
 | **Retrieval** | BM25 · Dense Retrieval · FAISS · Section Boost · Top-K · Evidence Trace |
 | **Backend / Service** | FastAPI · Pydantic · REST API · Streamlit · SQLite |
 | **Verification / Development** | pytest · Git · GitHub · Docker · GitHub Actions |
@@ -167,11 +177,12 @@
 <br>
 
 - AI4I 프로젝트는 시간 순서 Window를 사용하는 시계열 예측이 아니라 설비 상태 Feature 기반 고장 위험 분류입니다.
-- RNN·LSTM은 전공 과정에서 기본 구조를 학습했으며, 프로젝트에서는 센서 이상 탐지와 설비 상태 기반 예측을 구현했습니다.
+- RNN·LSTM은 전공 과정에서 기본 구조를 학습했습니다.
+- 센서 이상 탐지 저장소에는 학습 Loop가 구현되어 있지만 공개된 Model·History·평가 Artifact가 없어 학습 완료 성능으로 주장하지 않습니다.
 - Grad-CAM은 모델의 확정적인 판단 근거가 아니라 상대적으로 강하게 반응한 영역을 확인하는 보조 분석으로 사용했습니다.
 - Detection은 Test mAP@0.50 0.7077을 기록했지만 Recall 0.5268로 결함 누락이 남아 있습니다.
-- 제조 프로젝트는 공개 데이터와 샘플 데이터를 사용했으며 실제 반도체·디스플레이 생산라인 운영 경험으로 과장하지 않습니다.
-- 모델 결과는 높은 수치만 선택하지 않고 Precision·Recall Trade-off와 실패 사례를 함께 설명합니다.
+- 제조 프로젝트는 공개 데이터와 샘플 데이터를 사용했으며 실제 생산라인 운영 경험으로 과장하지 않습니다.
+- 임상 의학 NLP 프로젝트는 Source와 Dataset이 보관되어 있지 않아 Documentation-only로 구분합니다.
 
 </details>
 
