@@ -39,6 +39,7 @@
 | **[제조 품질 분석 NLP Agent](https://github.com/lightleaping/manufacturing-mcp-agent)** | 제조 질문에 따라 필요한 분석 Tool을 선택하고 결과 근거를 반환 | Python · FastAPI · Intent · Router · Tool · Evidence · Docker | 개인 프로젝트 · 제조 데이터·Workflow·API·CI 구현 | **4 Intents · 4 Tools · 2 Endpoints** |
 | **[다변량 센서 이상 탐지](https://github.com/lightleaping/sensor-anomaly-model-pipeline)** | Scale이 다른 센서값을 하나의 이상 탐지 흐름으로 연결 | Python · PyTorch · AutoEncoder · StandardScaler · FastAPI | 개인 프로젝트 · 전처리·학습/평가 코드·Threshold·CLI/API 파이프라인 | **AutoEncoder 기반 이상 탐지 파이프라인 구현** |
 | **[공정거래 의결서 NLP 검색](https://github.com/lightleaping/fair-decision-rag)** | 긴 의결서에서 질문과 관련된 근거 구간을 검색 | Python · BM25 · Dense Retrieval · FAISS · Section Boost | 공모전 Team Lead · 질문 분류·재정렬·검색 평가·일정/범위/통합 관리 | 중복 없는 **Top-5 Evidence** 검색 규칙 구현 |
+| **[임상 의학 논문 NLP 동향 분석](https://github.com/lightleaping/clinical-medical-paper-nlp-trend-analysis)** | 임상 의학 논문의 연도별 관심 주제와 기술 변화 분석 | Python · Web Scraping · Keyword Analysis · WordCloud | 전공 팀 프로젝트 · 개인 Scraping 코드 · 주제 선정 논의 · 보고서 결론 작성 | 연도별 핵심 키워드 시각화와 동향 보고서 제출 |
 
 ---
 
@@ -253,10 +254,8 @@ AI4I 설비 Feature
 
 ---
 
-## Academic NLP Project
-
 <details>
-<summary><b>임상 의학 논문 NLP 동향 분석 — Web Scraping · Yearly Keywords · WordCloud</b></summary>
+<summary><b>06 · 임상 의학 논문 NLP 동향 분석 — Web Scraping · Yearly Keywords · WordCloud</b></summary>
 
 <br>
 
@@ -289,7 +288,6 @@ AI4I 설비 Feature
 - **형태:** 전공 팀 프로젝트
 - **기술:** Python · Web Scraping · Keyword Analysis · WordCloud
 - **내 역할:** 개인 Web Scraping 코드 구현 · 주제 선정 논의 · 보고서 결론 파트 작성
-- **Repository:** [임상 의학 논문 NLP 동향 분석](https://github.com/lightleaping/clinical-medical-paper-nlp-trend-analysis)
 
 </details>
 
