@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="252" viewBox="0 0 1200 252" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="238" viewBox="0 0 1200 238" role="img" aria-labelledby="title desc">
   <title id="title">김수진 AI Developer</title>
-  <desc id="desc">제조 이미지, 설비 데이터, 자연어 문제를 AI 모델과 서비스 흐름으로 연결하는 개발자 프로필</desc>
+  <desc id="desc">Python과 PyTorch 기반으로 Vision, 설비 데이터, NLP 프로젝트를 구현한 AI 개발자 프로필</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#151F32"/>
@@ -8,17 +8,21 @@
       <stop offset="100%" stop-color="#3561D8"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="252" rx="24" fill="url(#bg)"/>
-  <circle cx="1090" cy="-30" r="175" fill="#21AFC4" opacity="0.17"/>
-  <circle cx="1180" cy="238" r="135" fill="#3561D8" opacity="0.24"/>
-  <rect x="62" y="39" width="8" height="174" rx="4" fill="#21AFC4"/>
+  <rect width="1200" height="238" rx="24" fill="url(#bg)"/>
+  <circle cx="1080" cy="-35" r="170" fill="#21AFC4" opacity="0.17"/>
+  <circle cx="1180" cy="225" r="130" fill="#3561D8" opacity="0.25"/>
+  <rect x="62" y="35" width="8" height="168" rx="4" fill="#21AFC4"/>
 
-  <text x="96" y="82" font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
-        font-size="20" font-weight="700" fill="#21AFC4" letter-spacing="2">AI DEVELOPER PORTFOLIO</text>
-  <text x="96" y="137" font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
-        font-size="44" font-weight="800" fill="#FFFFFF">김수진 | AI Developer</text>
-  <text x="96" y="177" font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
-        font-size="21" font-weight="500" fill="#EAF0F7">Python과 PyTorch로 제조 이미지·설비 데이터·자연어 문제를 구현하고,</text>
-  <text x="96" y="207" font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
-        font-size="21" font-weight="500" fill="#EAF0F7">결과와 한계를 검증해 실제 입력·응답이 가능한 AI 기능으로 연결합니다.</text>
+  <text x="96" y="76"
+        font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
+        font-size="19" font-weight="700" fill="#21AFC4" letter-spacing="2">AI DEVELOPER PORTFOLIO</text>
+  <text x="96" y="128"
+        font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
+        font-size="43" font-weight="800" fill="#FFFFFF">김수진 | AI Developer</text>
+  <text x="96" y="168"
+        font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
+        font-size="21" font-weight="500" fill="#EAF0F7">Vision·설비 데이터·NLP 문제를 Python과 PyTorch로 구현하고,</text>
+  <text x="96" y="198"
+        font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
+        font-size="21" font-weight="500" fill="#EAF0F7">모델 평가와 API·사용자 화면까지 연결하는 신입 AI 개발자입니다.</text>
 </svg>
