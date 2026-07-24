@@ -18,9 +18,9 @@
 
 | **Vision AI** | **Equipment & Sensor Data** | **NLP & Agent** | **AI Service Solution** |
 |---|---|---|---|
-| 이미지 분류 · 객체 탐지 · OpenCV · Grad-CAM · 실패 사례 분석 | 설비 상태 분류 · 클래스 불균형 대응 · SHAP · AutoEncoder 이상 탐지 파이프라인 | Intent · Router · Tool · Evidence · Retrieval · 연도별 키워드 분석 | PyTorch Model · FastAPI · Streamlit · SQLite · Docker · API·통합 테스트 |
+| 이미지 분류, 객체 탐지, OpenCV, Grad-CAM, 실패 사례 분석 | 설비 상태 분류, 클래스 불균형 대응, SHAP, AutoEncoder 이상 탐지 파이프라인 | Intent, Router, Tool, Evidence, Retrieval, 연도별 동향 분석 | PyTorch 모델, FastAPI, Streamlit, SQLite, Docker, API 및 통합 테스트 |
 
-> 데이터 전처리부터 모델 구현·평가, API와 사용자 화면 연결까지 직접 수행한 프로젝트 경험을 보유하고 있습니다.
+> **데이터 전처리 → 모델 구현 및 평가 → FastAPI와 Streamlit 연결**까지 직접 수행한 프로젝트 경험을 보유하고 있습니다.
 
 ---
 
@@ -32,79 +32,80 @@
 
 ## Representative Projects
 
-| Project | 해결한 문제 | Tech Stack | My Role | Result |
+| Project | Problem | Core Technologies | Scope & Contribution | Evidence |
 |---|---|---|---|---|
-| **[제조 표면 결함 Vision AI](https://github.com/lightleaping/manufacturing-vision-defect-analysis-system)** | 정상·불량 판정과 결함 종류·위치를 함께 확인 | Python · PyTorch · ResNet18 · Faster R-CNN · OpenCV · FastAPI · Streamlit | 14일 개인 프로젝트 · 기획부터 모델·평가·API·화면까지 전 과정 | **DEFECT-class F1 97.92%** · **mAP@0.50 0.7077** |
-| **[AI4I 기반 설비 고장 예측](https://github.com/lightleaping/manufacturing-ai-quality-agent-reference)** | 불균형한 설비 고장 데이터를 예측하고 판단 근거·이력을 함께 제공 | PyTorch MLP · SHAP · LangGraph · FastAPI · SQLite · Streamlit | 개인 프로젝트 · 모델·Evidence·Agent·API·Dashboard 구현 | **Recall 82.35%** · Agent 평가 **6/6 PASS** |
-| **[제조 품질 분석 NLP Agent](https://github.com/lightleaping/manufacturing-mcp-agent)** | 제조 질문에 따라 필요한 분석 Tool을 선택하고 결과 근거를 반환 | Python · FastAPI · Intent · Router · Tool · Evidence · Docker | 개인 프로젝트 · 제조 데이터·Workflow·API·CI 구현 | **4 Intents · 4 Tools · 2 Endpoints** |
-| **[다변량 센서 이상 탐지](https://github.com/lightleaping/sensor-anomaly-model-pipeline)** | Scale이 다른 센서값을 하나의 이상 탐지 흐름으로 연결 | Python · PyTorch · AutoEncoder · StandardScaler · FastAPI | 개인 프로젝트 · 전처리·학습/평가 코드·Threshold·CLI/API 파이프라인 | **AutoEncoder 기반 이상 탐지 파이프라인 구현** |
-| **[공정거래 의결서 NLP 검색](https://github.com/lightleaping/fair-decision-rag)** | 긴 의결서에서 질문과 관련된 근거 구간을 검색 | Python · BM25 · Dense Retrieval · FAISS · Section Boost | 공모전 Team Lead · 질문 분류·재정렬·검색 평가·일정/범위/통합 관리 | 중복 없는 **Top-5 Evidence** 검색 규칙 구현 |
-| **[임상 의학 논문 NLP 동향 분석](https://github.com/lightleaping/clinical-medical-paper-nlp-trend-analysis)** | 임상 의학 논문의 연도별 관심 주제와 기술 변화 분석 | Python · Web Scraping · Keyword Analysis · WordCloud | 전공 팀 프로젝트 · 개인 Scraping 코드 · 주제 선정 논의 · 보고서 결론 작성 | 연도별 핵심 키워드 시각화와 동향 보고서 제출 |
-
+| **[제조 표면 결함 Vision AI](https://github.com/lightleaping/manufacturing-vision-defect-analysis-system)** | 정상 및 불량 판정과 결함 종류 및 위치를 함께 확인 | Python, PyTorch, ResNet18, Faster R-CNN, OpenCV, FastAPI, Streamlit | **범위:** 이미지 분류, 객체 탐지, 성능 평가, 실패 분석, API, 대시보드<br>**담당:** 기획, 데이터 분석, 모델 개발, 평가, API, 화면, 테스트, 문서화 | **DEFECT-class F1 97.92%**<br>**mAP@0.50 0.7077** |
+| **[AI4I 기반 설비 고장 예측](https://github.com/lightleaping/manufacturing-ai-quality-agent-reference)** | 불균형한 설비 고장 데이터를 예측하고 판단 근거와 실행 이력을 함께 제공 | PyTorch MLP, SHAP, LangGraph, FastAPI, SQLite, Streamlit | **범위:** 고장 예측, 설명 근거, Agent 처리, 실행 이력, API, 대시보드<br>**담당:** 전처리, MLP, Evidence, Agent, SQLite, API, 화면, 평가 | **Recall 82.35%**<br>Agent 평가 **6/6 PASS** |
+| **[제조 품질 분석 NLP Agent](https://github.com/lightleaping/manufacturing-mcp-agent)** | 제조 질문에 맞는 분석 Tool을 선택하고 결과 근거를 반환 | Python, FastAPI, Intent, Router, Tool, Evidence, Docker | **범위:** 질문 분류, Tool Routing, 근거 응답, 모델 Endpoint, API, CI<br>**담당:** Schema, Intent, Router, 4개 Tool, Evidence, Endpoint, Docker, Actions, 테스트 | **4 Intents, 4 Tools**<br>**2 Endpoints** |
+| **[다변량 센서 이상 탐지](https://github.com/lightleaping/sensor-anomaly-model-pipeline)** | Scale이 다른 센서값을 하나의 이상 탐지 흐름으로 연결 | Python, PyTorch, AutoEncoder, StandardScaler, FastAPI | **범위:** 센서 전처리, AutoEncoder 학습 및 평가 코드, Threshold, CLI, API<br>**담당:** 데이터 생성, 전처리, 모델 구조, 학습 및 평가 코드, 추론 응답 구조 | AutoEncoder 기반<br>이상 탐지 Pipeline |
+| **[공정거래 의결서 NLP 검색](https://github.com/lightleaping/fair-decision-rag)** | 긴 의결서에서 질문과 관련된 근거 구간을 검색 | Python, BM25, Dense Retrieval, FAISS, Section Boost | **범위:** 문서 전처리, BM25 및 Dense 검색, 재정렬, 근거 추적, 검색 평가<br>**담당:** 질문 분류, Dense Baseline, Section Boost, Top-K 검증, Team Lead 운영 | 중복 없는<br>**Top-5 Evidence** 검색 규칙 |
+| **[임상 의학 논문 NLP 동향 분석](https://github.com/lightleaping/clinical-medical-paper-nlp-trend-analysis)** | 임상 의학 논문 데이터를 활용해 연도별 동향을 분석 | Python, Web Scraping, WordCloud | **범위:** 팀원별 Scraping, 주제 선정, 연도별 동향 분석, WordCloud, 보고서<br>**담당:** 개인 Scraping 코드, 주제 선정 논의, 보고서 결론 파트 | 연도별 분석 및 WordCloud<br>팀 보고서 제출 |
 ---
 
 ## Project Details
 
 <details open>
-<summary><b>01 · 제조 표면 결함 Vision AI — F1 97.92% · mAP@0.50 0.7077</b></summary>
+<summary><b>01. 제조 표면 결함 Vision AI — F1 97.92%, mAP@0.50 0.7077</b></summary>
 
 <br>
 
 ### Problem
 
-이미지 전체의 정상·불량 여부뿐 아니라, 개별 결함의 종류와 위치까지 확인할 수 있는 제조 Vision 흐름이 필요했습니다.
+이미지 전체의 정상 및 불량 여부뿐 아니라, 개별 결함의 종류와 위치까지 확인할 수 있는 제조 Vision 흐름이 필요했습니다.
 
-### Action
+### Implementation
 
 ```text
 이미지 데이터 분석
 → CNN Baseline / ResNet18 분류
-→ 오분류·Grad-CAM 분석
+→ 오분류 분석 및 Grad-CAM 확인
 → Faster R-CNN 객체 탐지
-→ FastAPI 분류·검출 API
+→ FastAPI 분류 API와 검출 API
 → Streamlit 결과 확인
 ```
 
 - Casting Product Image Data 7,348장 분석
 - CNN Baseline과 ResNet18 전이학습 비교
-- False Positive·False Negative 오분류 분석
-- NEU Surface Defect 1,800장, 6개 Class 객체 탐지
+- False Positive와 False Negative 오분류 분석
+- NEU Surface Defect 1,800장과 6개 Class 객체 탐지
 - 분류와 검출 결과를 독립된 API Endpoint로 제공
 
-### Result
+### Evidence
 
 - ResNet18 Test Accuracy **97.34%**
 - DEFECT-class F1 **97.92%**
 - Detection mAP@0.50 **0.707726**
 - Mean Matched IoU **0.752338**
 
-### Project Info
+### Project Scope
 
-- **기간:** 2026.07 · 14일 범위
-- **형태:** 개인 프로젝트
-- **범위:** 데이터 분석 · 모델 개발 · 평가 · 시각화 · API · Dashboard · 테스트 · 문서화
-- **내 역할:** 전 과정 직접 구현
+| 항목 | 내용 |
+|---|---|
+| **기간** | 2026.07 |
+| **형태** | 개인 프로젝트 |
+| **프로젝트 범위** | 이미지 데이터 분석, 정상 및 불량 분류, 6종 결함 객체 탐지, 성능 평가, 실패 사례 분석, FastAPI, Streamlit, 테스트, 문서화 |
+| **담당 범위** | 기획, 데이터 분석, CNN Baseline 및 ResNet18 분류 모델, Faster R-CNN 탐지 모델, 평가와 시각화, API, 화면, 테스트, 문서화 |
 
 </details>
 
 <details>
-<summary><b>02 · AI4I 기반 설비 고장 예측 — Recall 82.35% · Agent 6/6 PASS</b></summary>
+<summary><b>02. AI4I 기반 설비 고장 예측 — Recall 82.35%, Agent 6/6 PASS</b></summary>
 
 <br>
 
 ### Problem
 
-고장 Class가 적은 설비 데이터에서 고장 위험을 탐지하고, 예측 결과와 함께 주요 입력 특성·처리 경로·실행 이력을 확인할 필요가 있었습니다.
+고장 Class가 적은 설비 데이터에서 고장 위험을 탐지하고, 예측 결과와 함께 주요 입력 특성, 처리 경로와 실행 이력을 확인할 필요가 있었습니다.
 
-### Action
+### Implementation
 
 ```text
 AI4I 설비 Feature
 → PyTorch MLP 고장 예측
-→ Rule / SHAP Evidence
+→ Rule 및 SHAP Evidence
 → LangGraph Agent
-→ Trace / SQLite History
-→ FastAPI / Streamlit
+→ Trace와 SQLite History
+→ FastAPI와 Streamlit
 ```
 
 - StandardScaler와 `pos_weight`를 적용한 PyTorch MLP
@@ -113,32 +114,34 @@ AI4I 설비 Feature
 - LangGraph Routing과 Trace Event
 - SQLite 실행 이력과 Streamlit 4개 페이지
 
-### Result
+### Evidence
 
 - Recall **82.35%**
 - Agent Evaluation **6/6 PASS**
-- 실제 OpenAI E2E 시나리오 **PASS**
-- 전체 회귀 테스트 **307 passed**
+- 실제 OpenAI E2E 시나리오 PASS
+- 전체 회귀 테스트 307 passed
 
-### Project Info
+### Project Scope
 
-- **기간:** 2026.05–2026.07
-- **형태:** 개인 프로젝트
-- **범위:** 전처리 · 모델 · Evidence · Agent · API · Dashboard · 평가 · 테스트
-- **내 역할:** 전 과정 직접 구현
+| 항목 | 내용 |
+|---|---|
+| **기간** | 2026.05–2026.07 |
+| **형태** | 개인 프로젝트 |
+| **프로젝트 범위** | AI4I 데이터 전처리, MLP 고장 예측, 불균형 대응, SHAP 및 Rule Evidence, LangGraph Agent, 실행 이력, FastAPI, Streamlit, 평가, 테스트 |
+| **담당 범위** | 전처리, PyTorch MLP, Threshold 비교, Evidence 구성, LangGraph Routing, SQLite 이력, API, 대시보드, 모델 및 Agent 평가 |
 
 </details>
 
 <details>
-<summary><b>03 · 제조 품질 분석 NLP Agent — 4 Intents · 4 Tools · 2 Endpoints</b></summary>
+<summary><b>03. 제조 품질 분석 NLP Agent — 4 Intents, 4 Tools, 2 Endpoints</b></summary>
 
 <br>
 
 ### Problem
 
-불량률·센서 이상·라인 성능·원인 후보처럼 제조 질문마다 필요한 데이터와 분석 기능이 달랐습니다.
+불량률, 센서 이상, 라인 성능, 원인 후보처럼 제조 질문마다 필요한 데이터와 분석 기능이 달랐습니다.
 
-### Action
+### Implementation
 
 ```text
 사용자 질문
@@ -154,65 +157,69 @@ AI4I 설비 Feature
 - `quality_issue_candidates`
 - `/agent/query`
 - `/model/sensor-anomaly`
-- Docker·GitHub Actions·pytest
+- Docker, GitHub Actions, pytest
 
-### Result
+### Evidence
 
 - **4 Intents**
-- **4 Manufacturing Tools**
-- **2 FastAPI Endpoints**
-- **9 핵심 테스트**
+- **4 Tools**
+- **2 Endpoints**
+- 9 핵심 테스트
 
-### Project Info
+### Project Scope
 
-- **기간:** 2026.04–2026.05
-- **형태:** 개인 프로젝트
-- **범위:** 제조 데이터 · Intent · Router · Tool · Evidence · 모델 Endpoint · API · CI
-- **내 역할:** Workflow와 Backend 구조 직접 구현
+| 항목 | 내용 |
+|---|---|
+| **기간** | 2026.04–2026.05 |
+| **형태** | 개인 프로젝트 |
+| **프로젝트 범위** | 제조 질문 분류, Intent Routing, 4개 제조 Tool, Evidence 응답, 센서 이상 모델 Endpoint, FastAPI, Docker, GitHub Actions, 테스트 |
+| **담당 범위** | Schema, Intent 규칙, Router, Tool 구현, Evidence 구조, Agent 및 모델 Endpoint, Docker, CI, 테스트 |
 
 </details>
 
 <details>
-<summary><b>04 · 다변량 센서 이상 탐지 — AutoEncoder Pipeline</b></summary>
+<summary><b>04. 다변량 센서 이상 탐지 — AutoEncoder Pipeline</b></summary>
 
 <br>
 
 ### Problem
 
-온도·진동·압력·습도처럼 Scale이 다른 센서값을 동일한 전처리·학습·평가·추론 구조로 연결할 필요가 있었습니다.
+온도, 진동, 압력, 습도처럼 Scale이 다른 센서값을 동일한 전처리, 학습, 평가와 추론 구조로 연결할 필요가 있었습니다.
 
-### Action
+### Implementation
 
 ```text
 센서 데이터
-→ 결측치 처리 / Split / StandardScaler
+→ 결측치 처리, Split, StandardScaler
 → 4→8→2→8→4 AutoEncoder
 → Reconstruction Error
 → Validation Threshold
-→ CLI / FastAPI
+→ CLI와 FastAPI
 ```
 
 - 데이터 생성과 전처리 모듈
 - PyTorch AutoEncoder 구조
-- MSE Loss·Adam 기반 학습/검증 Loop 코드
+- MSE Loss와 Adam 기반 학습/검증 Loop 코드
 - Reconstruction Error와 Percentile Threshold
 - CLI와 FastAPI `/predict` 응답 구조
 
-### Result
+### Evidence
 
-- 전처리부터 학습·평가·추론까지 이어지는 파이프라인 구성
-- Prediction·Reconstruction Error·Threshold를 반환하는 API 구조 구현
+- 전처리부터 학습·평가·추론까지 이어지는 AutoEncoder Pipeline 구성
+- Prediction, Reconstruction Error, Threshold를 반환하는 API 응답 구조 구현
 
-### Project Info
+### Project Scope
 
-- **형태:** 개인 프로젝트
-- **범위:** 데이터 · 모델 구조 · 학습/평가 코드 · Threshold · CLI · API
-- **내 역할:** 파이프라인 전 과정 구현
+| 항목 | 내용 |
+|---|---|
+| **형태** | 개인 프로젝트 |
+| **프로젝트 범위** | 다변량 센서 데이터 생성과 전처리, AutoEncoder 모델, 학습 및 평가 코드, Reconstruction Error, Percentile Threshold, CLI, FastAPI |
+| **담당 범위** | 데이터 생성, 결측치 처리와 Scaling, AutoEncoder 구조, 학습 및 검증 Loop, Threshold 계산, CLI 및 API 응답 구조 |
 
 </details>
 
 <details>
-<summary><b>05 · 공정거래 의결서 NLP 검색 — Team Lead · Top-5 Evidence</b></summary>
+<summary><b>05. 공정거래 의결서 NLP 검색 — Team Lead, Top-5 Evidence</b></summary>
 
 <br>
 
@@ -220,11 +227,11 @@ AI4I 설비 Feature
 
 긴 공정거래 의결서에서 질문과 관련된 근거를 찾고, 중복 없이 원문 위치를 추적할 필요가 있었습니다.
 
-### Action
+### Implementation
 
 ```text
 공개 의결서
-→ BM25 / Dense Retrieval
+→ BM25 및 Dense Retrieval
 → Query Classification
 → Section Boost
 → Duplicate Removal
@@ -235,59 +242,58 @@ AI4I 설비 Feature
 - Dense Retrieval Baseline
 - Section 우선순위 기반 재정렬
 - 중복 없는 Top-5 `chunk_id`
-- 검색 결과 O/△/X 수동 평가
+- 검색 결과 O, △, X 수동 평가
 
-### Result
+### Evidence
 
 - 질문 유형에 따른 검색 Section 우선순위 적용
 - 중복 없는 Top-5 Evidence 규칙 구성
 - 검색 결과 평가와 실패 사례를 바탕으로 개선 기준 정리
 
-### Project Info
+### Project Scope
 
-- **형태:** 공모전 팀 프로젝트
-- **역할:** Team Lead · Retrieval Evaluation
-- **기술 역할:** 질문 분류 · Dense Baseline · Section Boost · Top-K 검증
-- **운영 역할:** 목표·역할·Sprint·일정·MVP 범위·통합 과정 관리
+| 항목 | 내용 |
+|---|---|
+| **형태** | 공모전 팀 프로젝트 |
+| **프로젝트 범위** | 의결서 전처리, BM25 및 Dense Retrieval, 검색 결과 결합, Section Boost, Top-K Evidence, 검색 평가, 답변 및 근거 추적 |
+| **담당 범위** | 질문 유형 분류, Dense Retrieval Baseline, Section Boost, Top-K 중복 제거와 검증, 검색 결과 평가, Team Lead로서 Sprint, 일정, MVP 범위, 통합 과정 관리 |
 
 </details>
 
----
-
 <details>
-<summary><b>06 · 임상 의학 논문 NLP 동향 분석 — Web Scraping · Yearly Keywords · WordCloud</b></summary>
+<summary><b>06. 임상 의학 논문 NLP 동향 분석 — Web Scraping, Yearly Trend, WordCloud</b></summary>
 
 <br>
 
 ### Problem
 
-관련 논문이 지속적으로 축적되는 임상 의학 분야에서 연도별 관심 주제와 기술 변화의 흐름을 비교할 필요가 있었습니다.
+임상 의학 관련 논문 데이터를 활용해 연도에 따른 연구 동향을 살펴보는 전공 팀 프로젝트를 수행했습니다.
 
-### Action
+### Implementation
 
 ```text
 팀원별 Web Scraping 코드 구현
-→ 수집 가능한 주제 논의
+→ 분석 주제 논의
 → 임상 의학 선정
-→ 연도별 논문 데이터 구분
-→ 핵심 키워드 분석
+→ 연도별 동향 분석
 → WordCloud 시각화
-→ 보고서 제출
+→ 팀 보고서 작성 및 제출
 ```
 
-### Result
+### Evidence
 
-- 연도별 핵심 키워드를 WordCloud로 시각화
-- 시기별 연구 관심사와 기술 변화 방향을 보고서로 정리
-- 분석 결과의 의미와 예상 영향을 결론으로 종합
+- 임상 의학 관련 논문 데이터의 연도별 동향 분석
+- WordCloud 기반 결과 시각화
+- 분석 결과를 정리한 팀 보고서 제출
 
-### Project Info
+### Project Scope
 
-- **기간:** 2025.03.04–2025.06.24
-- **소속:** 동양미래대학교
-- **형태:** 전공 팀 프로젝트
-- **기술:** Python · Web Scraping · Keyword Analysis · WordCloud
-- **내 역할:** 개인 Web Scraping 코드 구현 · 주제 선정 논의 · 보고서 결론 파트 작성
+| 항목 | 내용 |
+|---|---|
+| **기간** | 2025.03.04–2025.06.24 |
+| **형태** | 동양미래대학교 전공 팀 프로젝트 |
+| **프로젝트 범위** | 팀원별 Web Scraping 코드 구현, 분석 주제 선정, 임상 의학 논문의 연도별 동향 분석, WordCloud 시각화, 팀 보고서 작성 |
+| **담당 범위** | 개인 Web Scraping 코드 구현, 주제 선정 논의 참여, 보고서 결론 파트 작성 |
 
 </details>
 
@@ -297,12 +303,12 @@ AI4I 설비 Feature
 
 | 영역 | 기술 |
 |---|---|
-| **Language & Data** | Python · SQL · pandas · NumPy · scikit-learn |
-| **Deep Learning & Vision** | PyTorch · torchvision · CNN · ResNet18 · Faster R-CNN · MLP · AutoEncoder · OpenCV · Grad-CAM |
-| **NLP & Agent** | Web Scraping · Keyword Analysis · Intent · Router · Tool · Evidence · LangGraph · MCP |
-| **Retrieval** | BM25 · Dense Retrieval · FAISS · Section Boost · Top-K Evidence |
-| **Backend & Service** | FastAPI · Pydantic · Streamlit · SQLite · REST API |
-| **Verification & Development** | pytest · Git · GitHub · Docker · GitHub Actions |
+| **Language & Data** | Python, SQL, pandas, NumPy, scikit-learn |
+| **Deep Learning & Vision** | PyTorch, torchvision, CNN, ResNet18, Faster R-CNN, MLP, AutoEncoder, OpenCV, Grad-CAM |
+| **NLP & Agent** | Web Scraping, Keyword Analysis, Intent, Router, Tool, Evidence, LangGraph, MCP |
+| **Retrieval** | BM25, Dense Retrieval, FAISS, Section Boost, Top-K Evidence |
+| **Backend & Service** | FastAPI, Pydantic, Streamlit, SQLite, REST API |
+| **Verification & Development** | pytest, Git, GitHub, Docker, GitHub Actions |
 
 ---
 
