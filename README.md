@@ -34,12 +34,12 @@
 
 | Project | Problem | Tech Stack | Project Scope | Evidence |
 |---|---|---|---|---|
-| **[제조 표면 결함 Vision AI](https://github.com/lightleaping/manufacturing-vision-defect-analysis-system)** | 정상과 불량을 판정하고 결함 종류와 위치를 함께 확인 | Python, PyTorch, ResNet18, Faster R-CNN, OpenCV, FastAPI, Streamlit | **개인 프로젝트**<br>이미지 분석, 분류 모델, 객체 탐지 모델, 성능 평가, 실패 사례 분석, API, Dashboard, 테스트, 문서화 | **DEFECT-class F1 97.92%**<br>**mAP@0.50 0.7077** |
-| **[AI4I 기반 설비 고장 예측](https://github.com/lightleaping/manufacturing-ai-quality-agent-reference)** | 불균형한 설비 고장 데이터를 예측하고 판단 근거와 실행 이력을 함께 제공 | Python, PyTorch MLP, SHAP, LangGraph, FastAPI, SQLite, Streamlit | **개인 프로젝트**<br>데이터 처리, 고장 예측 모델, 설명 정보, Agent, Trace, API, Dashboard, 평가, 테스트 | **Recall 82.35%**<br>Agent 평가 **6/6 PASS** |
-| **[제조 품질 분석 NLP Agent](https://github.com/lightleaping/manufacturing-mcp-agent)** | 제조 질문에 맞는 분석 Tool을 선택하고 결과 근거를 반환 | Python, FastAPI, Intent, Router, Tool, Evidence, Docker | **개인 프로젝트**<br>제조 데이터, Intent 분류, Router, 4개 Tool, Evidence 응답, 모델 Endpoint, API, CI | **4 Intents, 4 Tools**<br>**2 Endpoints** |
-| **[다변량 센서 이상 탐지](https://github.com/lightleaping/sensor-anomaly-model-pipeline)** | Scale이 다른 센서값을 하나의 이상 탐지 흐름으로 연결 | Python, PyTorch, AutoEncoder, StandardScaler, FastAPI | **개인 프로젝트**<br>데이터 생성, 결측치 처리, Split, Scaler, AutoEncoder 구조, 학습 코드와 평가 코드, Threshold, CLI, API | AutoEncoder 기반<br>이상 탐지 Pipeline |
-| **[공정거래 의결서 NLP 검색](https://github.com/lightleaping/fair-decision-rag)** | 긴 의결서에서 질문과 관련된 근거 구간을 검색 | Python, BM25, Dense Retrieval, FAISS, Section Boost | **공모전 팀 프로젝트**<br>본인 기여: 질문 분류, Dense Baseline, Section Boost, 검색 평가, 일정 관리, 범위 조정, 통합 관리 | 중복 없는<br>**Top-5 Evidence** 검색 규칙 |
-| **[임상 의학 논문 NLP 동향 분석](https://github.com/lightleaping/clinical-medical-paper-nlp-trend-analysis)** | 임상 의학 논문 데이터를 활용해 연도별 동향을 분석 | Python, Web Scraping, WordCloud | **전공 팀 프로젝트**<br>본인 기여: 개인 Scraping 코드, 주제 선정 논의, 보고서 결론 파트 | 연도별 분석과 WordCloud를 포함한 팀 보고서 제출 |
+| **[제조 표면 결함 Vision AI](https://github.com/lightleaping/manufacturing-vision-defect-analysis-system)** | 정상과 불량을 판정하고 결함 종류와 위치를 함께 확인 | Python, PyTorch, ResNet18, Faster R-CNN, OpenCV, FastAPI, Streamlit | **2026.07 | 개인 프로젝트**<br>이미지 분석, 분류 모델, 객체 탐지 모델, 성능 평가, 실패 사례 분석, API, Dashboard, 테스트, 문서화 | **DEFECT-class F1 97.92%**<br>**mAP@0.50 0.7077** |
+| **[AI4I 기반 설비 고장 예측](https://github.com/lightleaping/manufacturing-ai-quality-agent-reference)** | 불균형한 설비 고장 데이터를 예측하고 판단 근거와 실행 이력을 함께 제공 | Python, PyTorch MLP, SHAP, LangGraph, FastAPI, SQLite, Streamlit | **2026.05–07 | 개인 프로젝트**<br>데이터 처리, 고장 예측 모델, 설명 정보, Agent, Trace, API, Dashboard, 평가, 테스트 | **Recall 82.35%**<br>Agent 평가 **6/6 PASS** |
+| **[제조 품질 분석 NLP Agent](https://github.com/lightleaping/manufacturing-mcp-agent)** | 제조 질문에 맞는 분석 Tool을 선택하고 결과 근거를 반환 | Python, FastAPI, Intent, Router, Tool, Evidence, Docker | **2026.04–05 | 개인 프로젝트**<br>제조 데이터, Intent 분류, Router, 4개 Tool, Evidence 응답, 모델 Endpoint, API, CI | **4 Intents, 4 Tools**<br>**2 Endpoints** |
+| **[다변량 센서 이상 탐지](https://github.com/lightleaping/sensor-anomaly-model-pipeline)** | Scale이 다른 센서값을 하나의 이상 탐지 흐름으로 연결 | Python, PyTorch, AutoEncoder, StandardScaler, FastAPI | **2026.05 | 개인 프로젝트**<br>데이터 생성, 결측치 처리, Split, Scaler, AutoEncoder 구조, 학습 코드와 평가 코드, Threshold, CLI, API | AutoEncoder 기반<br>이상 탐지 Pipeline |
+| **[공정거래 의결서 NLP 검색](https://github.com/lightleaping/fair-decision-rag)** | 긴 의결서에서 질문과 관련된 근거 구간을 검색 | Python, BM25, Dense Retrieval, FAISS, Section Boost | **2026.05 | 공모전 팀 프로젝트**<br>본인 기여: 질문 분류, Dense Baseline, Section Boost, 검색 평가, 일정 관리, 범위 조정, 통합 관리 | 중복 없는<br>**Top-5 Evidence** 검색 규칙 |
+| **[임상 의학 논문 NLP 동향 분석](https://github.com/lightleaping/clinical-medical-paper-nlp-trend-analysis)** | 임상 의학 논문 데이터를 활용해 연도별 동향을 분석 | Python, Web Scraping, WordCloud | **2025.03–06 | 전공 팀 프로젝트**<br>본인 기여: 개인 Scraping 코드, 주제 선정 논의, 보고서 결론 파트 | 연도별 분석과 WordCloud를 포함한 팀 보고서 제출 |
 ---
 
 ## Project Details
@@ -124,7 +124,7 @@ AI4I 설비 Feature
 
 | 항목 | 내용 |
 |---|---|
-| **일정** | 2026.05–2026.07 |
+| **일정** | 2026.05–07 |
 | **형태** | 개인 프로젝트 |
 | **프로젝트 범위** | AI4I 데이터 처리, PyTorch MLP 고장 예측, 클래스 불균형 대응, SHAP과 Permutation Importance, LangGraph Agent, Trace와 SQLite 이력, FastAPI, Streamlit Dashboard, 평가, 테스트 |
 
@@ -168,7 +168,7 @@ AI4I 설비 Feature
 
 | 항목 | 내용 |
 |---|---|
-| **일정** | 2026.04–2026.05 |
+| **일정** | 2026.04–05 |
 | **형태** | 개인 프로젝트 |
 | **프로젝트 범위** | 제조 데이터 처리, Intent 분류, Router, 4개 제조 Tool, Answer와 Evidence 응답, Sensor Anomaly 모델 Endpoint, FastAPI, Docker, GitHub Actions, pytest |
 
@@ -209,6 +209,7 @@ AI4I 설비 Feature
 
 | 항목 | 내용 |
 |---|---|
+| **일정** | 2026.05 |
 | **형태** | 개인 프로젝트 |
 | **프로젝트 범위** | 센서 데이터 생성, 결측치 처리, Train과 Validation 분할, StandardScaler, 4→8→2→8→4 AutoEncoder 구조, 학습 코드와 평가 코드, Reconstruction Error, Percentile Threshold, CLI, FastAPI |
 
@@ -250,6 +251,7 @@ AI4I 설비 Feature
 
 | 항목 | 내용 |
 |---|---|
+| **일정** | 2026.05 |
 | **형태** | 공모전 팀 프로젝트 |
 | **프로젝트 범위** | 공개 의결서 전처리, BM25와 Dense Retrieval, Query Classification, Section Boost, 중복 제거, Top-5 Evidence 검색과 평가 |
 | **본인 기여** | **Team Lead**로서 질문 분류, Dense Baseline, Section Boost, Top-K 검증, 검색 결과 평가, Sprint 운영, 일정과 MVP 범위 조정, 통합 상태 확인 |
@@ -286,7 +288,7 @@ AI4I 설비 Feature
 
 | 항목 | 내용 |
 |---|---|
-| **일정** | 2025.03.04–2025.06.24 |
+| **일정** | 2025.03–06 |
 | **형태** | 동양미래대학교 전공 팀 프로젝트 |
 | **프로젝트 범위** | 팀원별 Web Scraping 코드 작성, 분석 주제 선정, 임상 의학 논문의 연도별 동향 분석, WordCloud 시각화, 팀 보고서 작성 |
 | **본인 기여** | 개인 Web Scraping 코드 구현, 주제 선정 논의 참여, 보고서 결론 파트 작성 |
