@@ -12,7 +12,7 @@
         font-size="28" font-weight="800" fill="#151F32">AI Project Map</text>
   <text x="48" y="70"
         font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
-        font-size="15" fill="#5F6675">문제 영역 · 핵심 구현 · 대표 결과</text>
+        font-size="15" fill="#5F6675">문제 영역 | 핵심 구현 | 대표 결과</text>
 
   <!-- row 1 -->
   <g filter="url(#shadow)">
@@ -21,7 +21,7 @@
   </g>
   <text x="72" y="121" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" font-weight="800" fill="#21AFC4">VISION AI</text>
   <text x="72" y="148" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="20" font-weight="800" fill="#151F32">표면 결함 분류·객체 탐지</text>
-  <text x="72" y="170" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">ResNet18 · Faster R-CNN · F1 / mAP</text>
+  <text x="72" y="170" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">ResNet18, Faster R-CNN | F1, mAP</text>
 
   <g filter="url(#shadow)">
     <rect x="424" y="92" width="352" height="90" rx="15" fill="#FFFFFF" stroke="#D9E0E8"/>
@@ -29,7 +29,7 @@
   </g>
   <text x="448" y="121" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" font-weight="800" fill="#3561D8">EQUIPMENT AI</text>
   <text x="448" y="148" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="20" font-weight="800" fill="#151F32">AI4I 설비 고장 위험 예측</text>
-  <text x="448" y="170" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">PyTorch MLP · SHAP · Agent Trace</text>
+  <text x="448" y="170" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">Recall 82.35% | Agent 6/6 PASS</text>
 
   <g filter="url(#shadow)">
     <rect x="800" y="92" width="352" height="90" rx="15" fill="#FFFFFF" stroke="#D9E0E8"/>
@@ -37,7 +37,7 @@
   </g>
   <text x="824" y="121" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" font-weight="800" fill="#151F32">NLP AGENT</text>
   <text x="824" y="148" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="20" font-weight="800" fill="#151F32">제조 품질 분석 Agent</text>
-  <text x="824" y="170" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">Intent · Router · 4 Tools · Evidence</text>
+  <text x="824" y="170" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">4 Intents, 4 Tools | Evidence</text>
 
   <!-- row 2 -->
   <g filter="url(#shadow)">
@@ -46,7 +46,7 @@
   </g>
   <text x="72" y="233" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" font-weight="800" fill="#21AFC4">SENSOR PIPELINE</text>
   <text x="72" y="260" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="20" font-weight="800" fill="#151F32">다변량 센서 이상 탐지</text>
-  <text x="72" y="282" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">AutoEncoder · Threshold · CLI / API</text>
+  <text x="72" y="282" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">AutoEncoder, Threshold | CLI, API</text>
 
   <g filter="url(#shadow)">
     <rect x="424" y="204" width="352" height="90" rx="15" fill="#FFFFFF" stroke="#D9E0E8"/>
@@ -54,7 +54,7 @@
   </g>
   <text x="448" y="233" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" font-weight="800" fill="#3561D8">RETRIEVAL · TEAM</text>
   <text x="448" y="260" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="20" font-weight="800" fill="#151F32">공정거래 의결서 NLP 검색</text>
-  <text x="448" y="282" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">Dense Retrieval · Section Boost · Top-5</text>
+  <text x="448" y="282" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">Team Lead | Section Boost | Top-5</text>
 
   <g filter="url(#shadow)">
     <rect x="800" y="204" width="352" height="90" rx="15" fill="#FFFFFF" stroke="#D9E0E8"/>
@@ -62,5 +62,5 @@
   </g>
   <text x="824" y="233" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" font-weight="800" fill="#151F32">ACADEMIC NLP</text>
   <text x="824" y="260" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="20" font-weight="800" fill="#151F32">임상 의학 논문 동향 분석</text>
-  <text x="824" y="282" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">Web Scraping · Yearly Keywords · WordCloud</text>
+  <text x="824" y="282" font-family="'Noto Sans CJK KR','Malgun Gothic',Arial,sans-serif" font-size="14" fill="#5F6675">Web Scraping | Yearly Trend | WordCloud</text>
 </svg>

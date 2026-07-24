@@ -21,8 +21,8 @@
         font-size="43" font-weight="800" fill="#FFFFFF">김수진 | AI Developer</text>
   <text x="96" y="168"
         font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
-        font-size="21" font-weight="500" fill="#EAF0F7">Vision·설비 데이터·NLP 문제를 Python과 PyTorch로 구현하고,</text>
+        font-size="21" font-weight="500" fill="#EAF0F7">Vision, 설비 데이터, NLP 문제를 Python과 PyTorch로 구현하고,</text>
   <text x="96" y="198"
         font-family="'Noto Sans CJK KR','Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif"
-        font-size="21" font-weight="500" fill="#EAF0F7">모델 평가와 API·사용자 화면까지 연결하는 신입 AI 개발자입니다.</text>
+        font-size="21" font-weight="500" fill="#EAF0F7">모델 평가, 실패 분석, FastAPI 서비스 연결까지 직접 수행합니다.</text>
 </svg>
