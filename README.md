@@ -229,23 +229,23 @@ AI4I 설비 Feature
 
 ### Implementation
 
-```markdown
+
 ```text
 공개 의결서 31,877개 청크
 → BM25 / Dense Retrieval
 → Query Classification
-→ Section Boost / Score Fusion
+→ Weighted Score Fusion / Section Boost
 → Unique and Valid Top-5
 → Grounded Extractive Answer
 → FastAPI / Offline Docker
 ```
 
 - 공정거래위원회 공개 의결서 청크 31,877개 처리
-- BM25와 다국어 Dense Retrieval 결합
-- 질문 유형 분류와 Section Boost 기반 순위 조정
-- 중복 제거와 원본 `chunk_id` 유효성 검증
-- Top-5 근거 범위 안의 추출형 답변과 Evidence Trace
-- FastAPI와 외부 네트워크 없는 Docker 실행
+- BM25와 다국어 MiniLM Dense Retrieval 결과를 가중 결합
+- Query Classification과 Section Boost로 질문 유형별 순위 보정
+- 원본 `chunk_id` 유효성 검사와 중복 없는 Top-5 반환
+- 검색된 Top-5 범위 안에서 추출형 Answer와 Evidence Trace 구성
+- FastAPI와 외부 네트워크 없는 Docker 실행 환경 구현
 
 ### Evidence
 
