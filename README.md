@@ -229,7 +229,6 @@ AI4I 설비 Feature
 
 ### Implementation
 
-
 ```text
 공개 의결서 31,877개 청크
 → BM25 / Dense Retrieval
