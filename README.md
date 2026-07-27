@@ -206,7 +206,7 @@ AI4I 설비 Feature
 - Anomaly Recall **96.67%**
 - F1 Score **86.57%**
 - Confusion Matrix **TN 284, FP 16, FN 2, TP 58**
-- Validation 정상 Reconstruction Error로 Threshold를 결정하고, Held-out Test 평가는 별도로 수행
+- Validation 데이터로 Threshold를 정하고, 분리된 Test 데이터로 최종 성능 평가
 
 ### Project Scope
 
