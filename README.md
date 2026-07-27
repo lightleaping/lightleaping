@@ -37,7 +37,7 @@
 | **[제조 표면 결함 Vision AI](https://github.com/lightleaping/manufacturing-vision-defect-analysis-system)**<br><sub>Manufacturing Vision Defect Analysis System</sub> | 정상과 불량을 판정하고 결함 종류와 위치를 함께 확인 | Python, PyTorch, ResNet18, Faster R-CNN, OpenCV, FastAPI, Streamlit | 기간: **2026.07**<br>형태: **개인 프로젝트**<br>범위: 이미지 분석, 분류 모델, 객체 탐지 모델, 성능 평가, 실패 사례 분석, API, Dashboard, 테스트, 문서화 | **DEFECT-class F1 97.92%**<br>**mAP@0.50 0.7077** |
 | **[AI4I 기반 설비 고장 예측](https://github.com/lightleaping/manufacturing-ai-quality-agent)**<br><sub>Manufacturing AI Quality Agent</sub> | 불균형한 설비 고장 데이터를 예측하고 판단 근거와 실행 이력을 함께 제공 | Python, PyTorch MLP, SHAP, LangGraph, FastAPI, SQLite, Streamlit | 기간: **2026.05–07**<br>형태: **개인 프로젝트**<br>범위: 데이터 처리, 고장 예측 모델, 설명 정보, Agent, Trace, API, Dashboard, 평가, 테스트 | **Recall 82.35%**<br>Agent 평가 **6/6 PASS** |
 | **[제조 품질 분석 NLP Agent](https://github.com/lightleaping/manufacturing-mcp-agent)**<br><sub>Manufacturing MCP Agent</sub> | 제조 질문에 맞는 분석 Tool을 선택하고 결과 근거를 반환 | Python, FastAPI, Intent, Router, Tool, Evidence, Docker | 기간: **2026.04–05**<br>형태: **개인 프로젝트**<br>범위: 제조 데이터, Intent 분류, Router, 4개 Tool, Evidence 응답, 모델 Endpoint, API, CI | **4 Intents, 4 Tools**<br>**2 Core POST Endpoints** |
-| **[다변량 센서 이상 탐지](https://github.com/lightleaping/sensor-anomaly-model-pipeline)**<br><sub>Sensor Anomaly Model Pipeline</sub> | Scale이 다른 센서값을 하나의 이상 탐지 흐름으로 연결 | Python, PyTorch, AutoEncoder, StandardScaler, FastAPI | 기간: **2026.05**<br>형태: **개인 프로젝트**<br>범위: 데이터 생성, 결측치 처리, Split, Scaler, AutoEncoder 구조, 학습 코드와 평가 코드, Threshold, CLI, API | AutoEncoder 기반<br>이상 탐지 Pipeline |
+| **[다변량 센서 이상 탐지](https://github.com/lightleaping/sensor-anomaly-model-pipeline)**<br><sub>Sensor Anomaly Model Pipeline</sub> | Scale이 다른 센서값을 하나의 이상 탐지 흐름으로 연결 | Python, PyTorch, AutoEncoder, StandardScaler, FastAPI | 기간: **2026.05**<br>형태: **개인 프로젝트**<br>범위: 데이터 생성, 결측치 처리, Split, Scaler, AutoEncoder 구조, 학습 코드와 평가 코드, Threshold, CLI, API | 합성 Held-out Test<br>**Recall 96.67% · F1 86.57%** |
 | **[공정거래 의결서 NLP 검색](https://github.com/lightleaping/fair-decision-rag)**<br><sub>Fair Decision RAG</sub> | 긴 의결서에서 질문과 관련된 근거 구간을 검색 | Python, BM25, Dense Retrieval, FAISS, Section Boost | 기간: **2026.05**<br>형태: **공모전 팀 프로젝트**<br>본인 기여: 질문 분류, Dense Baseline, Section Boost, 검색 평가, 일정 관리, 범위 조정, 통합 관리 | 중복 없는<br>**Top-5 Evidence** 검색 규칙 |
 | **[임상 의학 논문 NLP 동향 분석](https://github.com/lightleaping/clinical-medical-paper-nlp-trend-analysis)**<br><sub>Clinical Medical Paper NLP Trend Analysis</sub> | 임상 의학 논문 데이터를 활용해 연도별 동향을 분석 | Python, Web Scraping, WordCloud | 기간: **2025.03–06**<br>형태: **전공 팀 프로젝트**<br>본인 기여: 개인 Scraping 코드, 주제 선정 논의, 보고서 결론 파트 | 연도별 분석과 WordCloud를 포함한 팀 보고서 제출 |
 ---
@@ -175,7 +175,7 @@ AI4I 설비 Feature
 </details>
 
 <details>
-<summary><b>04 | 다변량 센서 이상 탐지</b> <sub>(Sensor Anomaly Model Pipeline)</sub><b> — AutoEncoder Pipeline</b></summary>
+<summary><b>04 | 다변량 센서 이상 탐지</b> <sub>(Sensor Anomaly Model Pipeline)</sub><b> — Recall 96.67%, F1 86.57%</b></summary>
 
 <br>
 
@@ -202,8 +202,11 @@ AI4I 설비 Feature
 
 ### Evidence
 
-- 전처리부터 학습, 평가, 추론까지 이어지는 AutoEncoder Pipeline 구성
-- Prediction, Reconstruction Error, Threshold를 반환하는 API 응답 구조 구현
+- 합성 Held-out Test Accuracy **95.00%**
+- Anomaly Recall **96.67%**
+- F1 Score **86.57%**
+- Confusion Matrix **TN 284, FP 16, FN 2, TP 58**
+- Validation 정상 Reconstruction Error로 Threshold를 결정하고, Held-out Test 평가는 별도로 수행
 
 ### Project Scope
 
@@ -211,7 +214,7 @@ AI4I 설비 Feature
 |---|---|
 | **일정** | 2026.05 |
 | **형태** | 개인 프로젝트 |
-| **프로젝트 범위** | 센서 데이터 생성, 결측치 처리, Train과 Validation 분할, StandardScaler, 4→8→2→8→4 AutoEncoder 구조, 학습 코드와 평가 코드, Reconstruction Error, Percentile Threshold, CLI, FastAPI |
+| **프로젝트 범위** | 합성 센서 데이터 생성, Train·Validation·Test 분리, Train 기준 StandardScaler, 정상 데이터 기반 AutoEncoder 학습, Early Stopping, Validation Threshold, Held-out Test 평가, Checkpoint, Model Card, CLI, FastAPI, pytest, GitHub Actions |
 
 </details>
 
