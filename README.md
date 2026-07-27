@@ -38,7 +38,7 @@
 | **[AI4I 기반 설비 고장 예측](https://github.com/lightleaping/manufacturing-ai-quality-agent)**<br><sub>Manufacturing AI Quality Agent</sub> | 불균형한 설비 고장 데이터를 예측하고 판단 근거와 실행 이력을 함께 제공 | Python, PyTorch MLP, SHAP, LangGraph, FastAPI, SQLite, Streamlit | 기간: **2026.05–07**<br>형태: **개인 프로젝트**<br>범위: 데이터 처리, 고장 예측 모델, 설명 정보, Agent, Trace, API, Dashboard, 평가, 테스트 | **Recall 82.35%**<br>Agent 평가 **6/6 PASS** |
 | **[제조 품질 분석 NLP Agent](https://github.com/lightleaping/manufacturing-mcp-agent)**<br><sub>Manufacturing MCP Agent</sub> | 제조 질문에 맞는 분석 Tool을 선택하고 결과 근거를 반환 | Python, FastAPI, Intent, Router, Tool, Evidence, Docker | 기간: **2026.04–05**<br>형태: **개인 프로젝트**<br>범위: 제조 데이터, Intent 분류, Router, 4개 Tool, Evidence 응답, 모델 Endpoint, API, CI | **4 Intents, 4 Tools**<br>**2 Core POST Endpoints** |
 | **[다변량 센서 이상 탐지](https://github.com/lightleaping/sensor-anomaly-model-pipeline)**<br><sub>Sensor Anomaly Model Pipeline</sub> | Scale이 다른 센서값을 하나의 이상 탐지 흐름으로 연결 | Python, PyTorch, AutoEncoder, StandardScaler, FastAPI | 기간: **2026.05**<br>형태: **개인 프로젝트**<br>범위: 데이터 생성, 결측치 처리, Split, Scaler, AutoEncoder 구조, 학습 코드와 평가 코드, Threshold, CLI, API | 합성 Held-out Test<br>**Recall 96.67% · F1 86.57%** |
-| **[공정거래 의결서 NLP 검색](https://github.com/lightleaping/fair-decision-rag)**<br><sub>Fair Decision RAG</sub> | 긴 의결서에서 질문과 관련된 근거 구간을 검색 | Python, BM25, Dense Retrieval, FAISS, Section Boost | 기간: **2026.05**<br>형태: **공모전 팀 프로젝트**<br>본인 기여: 질문 분류, Dense Baseline, Section Boost, 검색 평가, 일정 관리, 범위 조정, 통합 관리 | 중복 없는<br>**Top-5 Evidence** 검색 규칙 |
+| **[공정거래 의결서 NLP 검색](https://github.com/lightleaping/fair-decision-rag)**<br><sub>Fair Decision RAG</sub> | 긴 의결서에서 질문 관련 근거를 검색하고 근거 기반 답변을 제공 | Python, BM25, Dense Retrieval, Section Boost, FastAPI, Docker | 기간: **2026.05–07**<br>형태: **공모전 팀 프로젝트**<br>본인 기여: Team Lead, 질문 분류, Dense Baseline, Section Boost, 검색 평가, 일정·범위·통합 관리 | Silver QA **Recall@5 0.9850**<br>Offline Docker **200/200 PASS** |
 | **[임상 의학 논문 NLP 동향 분석](https://github.com/lightleaping/clinical-medical-paper-nlp-trend-analysis)**<br><sub>Clinical Medical Paper NLP Trend Analysis</sub> | 임상 의학 논문 데이터를 활용해 연도별 동향을 분석 | Python, Web Scraping, WordCloud | 기간: **2025.03–06**<br>형태: **전공 팀 프로젝트**<br>본인 기여: 개인 Scraping 코드, 주제 선정 논의, 보고서 결론 파트 | 연도별 분석과 WordCloud를 포함한 팀 보고서 제출 |
 ---
 
@@ -219,7 +219,7 @@ AI4I 설비 Feature
 </details>
 
 <details>
-<summary><b>05 | 공정거래 의결서 NLP 검색</b> <sub>(Fair Decision RAG)</sub><b> — Team Lead, Top-5 Evidence</b></summary>
+<summary><b>05 | 공정거래 의결서 NLP 검색</b> <sub>(Fair Decision RAG)</sub><b> — Team Lead, Silver Recall@5 0.9850</b></summary>
 
 <br>
 
@@ -229,35 +229,41 @@ AI4I 설비 Feature
 
 ### Implementation
 
+```markdown
 ```text
-공개 의결서
+공개 의결서 31,877개 청크
 → BM25 / Dense Retrieval
 → Query Classification
-→ Section Boost
-→ Duplicate Removal
-→ Top-5 Evidence
+→ Section Boost / Score Fusion
+→ Unique and Valid Top-5
+→ Grounded Extractive Answer
+→ FastAPI / Offline Docker
 ```
 
-- 질문 유형 분류
-- Dense Retrieval Baseline
-- Section 우선순위 기반 재정렬
-- 중복 없는 Top-5 `chunk_id`
-- 검색 결과 O/△/X 수동 평가
+- 공정거래위원회 공개 의결서 청크 31,877개 처리
+- BM25와 다국어 Dense Retrieval 결합
+- 질문 유형 분류와 Section Boost 기반 순위 조정
+- 중복 제거와 원본 `chunk_id` 유효성 검증
+- Top-5 근거 범위 안의 추출형 답변과 Evidence Trace
+- FastAPI와 외부 네트워크 없는 Docker 실행
 
 ### Evidence
 
-- 질문 유형에 따른 검색 Section 우선순위 적용
-- 중복 없는 Top-5 Evidence 규칙 구성
-- 검색 결과 평가와 실패 사례를 바탕으로 개선 기준 정리
+- 자체 생성 Silver QA 500개 기준 Recall@5 **0.9850**
+- Silver QA 기준 MRR **0.9810**
+- Offline Docker HTTP 요청 **200/200 PASS**
+- 평균 응답시간 **1.4503초**, 최대 **13.3913초**
+- Generation Token F1은 **0.0595**로 답변 선택과 압축에 개선 필요
+- 공식 비공개 Gold Set 평가 결과가 아닌 개발·회귀 검증용 수치
 
 ### Project Scope
 
 | 항목 | 내용 |
 |---|---|
-| **일정** | 2026.05 |
+| **일정** | 2026.05–07 |
 | **형태** | 공모전 팀 프로젝트 |
-| **프로젝트 범위** | 공개 의결서 전처리, BM25와 Dense Retrieval, Query Classification, Section Boost, 중복 제거, Top-5 Evidence 검색과 평가 |
-| **본인 기여** | **Team Lead**로서 질문 분류, Dense Baseline, Section Boost, Top-K 검증, 검색 결과 평가, Sprint 운영, 일정과 MVP 범위 조정, 통합 상태 확인 |
+| **프로젝트 범위** | 공개 의결서 31,877개 청크 처리, BM25와 Dense Retrieval, Query Classification, Score Fusion, Section Boost, 원본 ID 검증, Top-5 Evidence, 추출형 Answer, FastAPI, Offline Docker, Silver QA 평가와 HTTP 안정성 검증 |
+| **본인 기여** | **Team Lead**로서 질문 분류, Dense Baseline, Section Boost, Top-K 검증, 검색 결과 평가, Sprint 운영, 일정과 MVP 범위 조정, 지연 작업 지원, GitHub 통합 상태 확인 |
 
 </details>
 
