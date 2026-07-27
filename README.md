@@ -131,7 +131,7 @@ AI4I 설비 Feature
 </details>
 
 <details>
-<summary><b>03 | 제조 품질 분석 NLP Agent — 4 Intents, 4 Tools, 2 Endpoints</b></summary>
+<summary><b>03 | 제조 품질 분석 NLP Agent — 4 Intents, 4 Tools, 2 Core POST Endpoints</b></summary>
 
 <br>
 
@@ -160,8 +160,8 @@ AI4I 설비 Feature
 ### Evidence
 
 - **4 Intents**
-- **4 Tools**
-- **2 Endpoints**
+- **4 Agent Tools**
+- **2 Core POST Endpoints**
 - 9 핵심 테스트
 
 ### Project Scope
