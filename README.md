@@ -2,13 +2,13 @@
 
 <img src="./assets/profile-banner.svg" alt="김수진 AI Developer 프로필 배너" width="100%">
 
-<br>
+<br><br>
 
-![Python](https://img.shields.io/badge/Python-3561D8?style=flat-square&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-21AFC4?style=flat-square&logo=pytorch&logoColor=white)
-![Vision AI](https://img.shields.io/badge/Vision_AI-151F32?style=flat-square)
-![NLP & Agent](https://img.shields.io/badge/NLP_%26_Agent-3561D8?style=flat-square)
-![FastAPI](https://img.shields.io/badge/FastAPI-21AFC4?style=flat-square&logo=fastapi&logoColor=white)
+<img src="https://img.shields.io/badge/Python-3561D8?style=flat-square&logo=python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/PyTorch-21AFC4?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch">
+<img src="https://img.shields.io/badge/Vision_AI-151F32?style=flat-square" alt="Vision AI">
+<img src="https://img.shields.io/badge/NLP_%26_Agent-3561D8?style=flat-square" alt="NLP & Agent">
+<img src="https://img.shields.io/badge/FastAPI-21AFC4?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
 
 </div>
 
