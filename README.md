@@ -1,14 +1,18 @@
 <div align="center">
 
-<img src="./assets/profile-banner.svg" width="100%" alt="banner">
+<img src="./assets/profile-banner.svg" alt="배너" width="100%">
 
 <br><br>
 
-<img src="https://img.shields.io/badge/Python-3561D8?style=flat-square&logo=python&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/PyTorch-21AFC4?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
-<img src="https://img.shields.io/badge/Vision_AI-151F32?style=flat-square" alt="Vision AI" />
-<img src="https://img.shields.io/badge/NLP_%26_Agent-3561D8?style=flat-square" alt="NLP & Agent" />
-<img src="https://img.shields.io/badge/FastAPI-21AFC4?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+<table>
+<tr>
+<td><img src="https://img.shields.io/badge/Python-3561D8?style=flat-square&logo=python&logoColor=white" alt="Python"></td>
+<td><img src="https://img.shields.io/badge/PyTorch-21AFC4?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"></td>
+<td><img src="https://img.shields.io/badge/Vision_AI-151F32?style=flat-square" alt="Vision AI"></td>
+<td><img src="https://img.shields.io/badge/NLP_%26_Agent-3561D8?style=flat-square" alt="NLP & Agent"></td>
+<td><img src="https://img.shields.io/badge/FastAPI-21AFC4?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"></td>
+</tr>
+</table>
 
 </div>
 
