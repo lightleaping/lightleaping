@@ -20,11 +20,11 @@
 
 ## Core Strengths
 
-| **Vision AI** | **Equipment & Sensor Data** | **NLP & Agent** | **AI Service Solution** |
+| **Vision AI** | **Predictive Modeling** | **NLP & AI Agent** | **AI Service Backend** |
 |---|---|---|---|
-| 이미지 분류, 객체 탐지, OpenCV, Grad-CAM, 실패 사례 분석 | 설비 상태 분류, 클래스 불균형 대응, SHAP, AutoEncoder 이상 탐지 파이프라인 | Intent, Router, Tool, Evidence, Retrieval, 연도별 동향 분석 | PyTorch Model, FastAPI, Streamlit, SQLite, Docker, API와 통합 테스트 |
+| 이미지 분류, 객체 탐지, OpenCV, Grad-CAM, 실패 사례 분석 | 불균형 데이터 대응 · MLP · SHAP · 센서 이상 탐지 | RAG · Intent · Router · Tool · Evidence · LangGraph · MCP | PyTorch Model · FastAPI · Streamlit · SQLite · Docker · API 테스트 |
 
-> **데이터 전처리 → 모델 구현과 평가 → FastAPI와 Streamlit 연결**까지 직접 수행한 프로젝트 경험을 보유하고 있습니다.
+> **데이터를 분석하고 모델과 AI Workflow를 구현한 뒤, 결과를 FastAPI API와 사용자 화면으로 연결했습니다.
 
 ---
 
