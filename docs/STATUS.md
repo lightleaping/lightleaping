@@ -31,3 +31,11 @@
 - 새 네 프로젝트와 공통 학습을 구분.
 - 실제 상품 사용, XR·하드웨어 제외, Agent·자동 원인 분석·보고서 필수, Streamlit 재구현을 반영.
 - 새로운 모델 학습·배포·평가를 완료했다고 주장하지 않음.
+
+## 작업 저장소
+
+- [코디 추천·보드 서비스](https://github.com/lightleaping/fashion-outfit-board): 저장소·준비 문서 생성. 본인 구현·실행·이해 확인은 별도 진행.
+- [사례 기반 이상탐지·분석 Agent](https://github.com/lightleaping/case-based-anomaly-agent): 저장소·준비 문서 생성. 본인 구현·실행·이해 확인은 별도 진행.
+- [Structured Bloom — Streamlit](https://github.com/lightleaping/structured-bloom-streamlit): 저장소·준비 문서 생성. 본인 구현·실행·이해 확인은 별도 진행.
+- [세계관 AI 캐릭터 엔진](https://github.com/lightleaping/world-character-engine): 저장소·준비 문서 생성. 본인 구현·실행·이해 확인은 별도 진행.
+- [Python·PyTorch 공통 기본기](https://github.com/lightleaping/ai-developer-relearning-labs): 저장소·준비 문서 생성. 본인 구현·실행·이해 확인은 별도 진행.

@@ -1,5 +1,7 @@
 # Structured Bloom — Streamlit 재구현
 
+[작업 저장소](https://github.com/lightleaping/structured-bloom-streamlit) · [첫 미션](https://github.com/lightleaping/structured-bloom-streamlit/blob/main/docs/MISSION-01.md)
+
 상태: Python 기반 재구현 준비. 면접 활용: 제외, 새 버전 직접 구현·검증 후 재검토.
 
 ## 목표와 범위
@@ -37,7 +39,7 @@
 
 ## 현재 결과
 
-새 Streamlit 버전: 실행 미검증. AI 연동: 미검증. 공개 코드·데모: 아직 연결하지 않음.
+새 Streamlit 버전: 실행 미검증. AI 연동: 미검증. 작업 저장소 개설 완료. 현재 준비 문서만 있으며 실행 코드·데모는 아직 없습니다.
 
 첫 미션 완료 기준: 기분·시간 입력으로 활동을 표시하고, 추천 로직과 화면의 역할을 설명합니다.
 

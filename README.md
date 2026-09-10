@@ -11,10 +11,12 @@ AI 모델과 데이터를 실제 사용 가능한 서비스로 연결하는 개�
 
 | 프로젝트 | 목표 | 현재 단계 |
 |---|---|---|
-| [코디 추천·보드](docs/projects/fashion-board.md) | 실제 상품 이미지로 의류 조합을 추천하고 코디 보드 출력 | 기존 코드 검토·첫 구현 준비 |
-| [사례 기반 이상탐지·분석 Agent](docs/projects/anomaly-agent.md) | 소프트웨어 오류 시나리오를 탐지·분석하고 보고서 생성 | 연구 범위·실험 설계 |
-| [Structured Bloom](docs/projects/structured-bloom.md) | 기분과 여유 시간에 맞는 활동 추천 서비스를 Streamlit으로 구현 | Python 기반 재구현 준비 |
-| [세계관 AI 캐릭터 엔진](docs/projects/character-engine.md) | 기억·상태·허용 행동에 따른 캐릭터 응답과 실행 | 범위 설계 |
+| [코디 추천·보드](https://github.com/lightleaping/fashion-outfit-board) | 실제 상품 이미지로 의류 조합을 추천하고 코디 보드 출력 | 기존 코드 검토·첫 구현 준비 |
+| [사례 기반 이상탐지·분석 Agent](https://github.com/lightleaping/case-based-anomaly-agent) | 소프트웨어 오류 시나리오를 탐지·분석하고 보고서 생성 | 연구 범위·실험 설계 |
+| [Structured Bloom](https://github.com/lightleaping/structured-bloom-streamlit) | 기분과 여유 시간에 맞는 활동 추천 서비스를 Streamlit으로 구현 | Python 기반 재구현 준비 |
+| [세계관 AI 캐릭터 엔진](https://github.com/lightleaping/world-character-engine) | 기억·상태·허용 행동에 따른 캐릭터 응답과 실행 | 범위 설계 |
+
+[공통 기본기 학습 저장소](https://github.com/lightleaping/ai-developer-relearning-labs) · [프로젝트 상세 범위](docs/README.md)
 
 ## 학습과 검증
 

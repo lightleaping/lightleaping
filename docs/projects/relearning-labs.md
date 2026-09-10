@@ -1,5 +1,7 @@
 # 공통 기본기 학습
 
+[작업 저장소](https://github.com/lightleaping/ai-developer-relearning-labs) · [첫 미션](https://github.com/lightleaping/ai-developer-relearning-labs/blob/main/docs/MISSION-01.md)
+
 목표: Python부터 Agent까지 필요한 개념을 작은 코드로 확인하고 실제 프로젝트에 적용합니다. 학습용 기록이며 별도 완성형 대표 프로젝트로 취급하지 않습니다.
 
 ## 방식

@@ -1,5 +1,7 @@
 # 사례 기반 이상탐지·원인 분석 Agent
 
+[작업 저장소](https://github.com/lightleaping/case-based-anomaly-agent) · [첫 미션](https://github.com/lightleaping/case-based-anomaly-agent/blob/main/docs/MISSION-01.md)
+
 상태: 연구 범위·실험 설계. 면접 활용: 제외, 직접 구현·평가·설명 확인 후 재검토.
 
 ## 연구 목표
@@ -51,7 +53,7 @@
 
 ## 현재 결과
 
-시나리오·모델·Agent 성능: 미측정. 논문: 작성 준비. 공개 코드·데모: 아직 연결하지 않음.
+시나리오·모델·Agent 성능: 미측정. 논문: 작성 준비. 작업 저장소 개설 완료. 현재 준비 문서만 있으며 실행 코드·데모는 아직 없습니다.
 
 첫 미션: 대상 시스템, 관측 변수 3~4개, 첫 오류의 원리, 사례 근거와 가정, 평가자만 볼 정답을 한 장의 설계 카드로 정리합니다.
 
