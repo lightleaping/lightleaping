@@ -2,7 +2,7 @@
 
 [작업 저장소](https://github.com/lightleaping/world-character-engine) · [첫 미션](https://github.com/lightleaping/world-character-engine/blob/main/docs/MISSION-01.md)
 
-상태: 범위 설계. 면접 활용: 제외, 직접 구현·평가·설명 확인 후 재검토.
+상태: 1회차 상태·행동 엔진 구현 및 자동 테스트 완료.
 
 ## 목표
 
@@ -35,10 +35,17 @@ LangGraph는 상태·분기 관리의 필요가 생길 때 검토합니다. 프�
 - 같은 요청 재시도 시 중복 행동 방지.
 - 다른 사용자의 기억이 검색되지 않는지 확인.
 
-## 현재 결과
+## 현재 구현 결과
 
-설정 상세·실행 코드·평가 결과: 아직 이 포트폴리오에서 확인하지 않았습니다. 작업 저장소 개설 완료. 현재 준비 문서만 있으며 실행 코드·데모는 아직 없습니다.
+- Python으로 독립적인 초기 상태 생성.
+- 허용 행동 목록과 구조화된 행동 제안 검증.
+- 상태 선행 조건을 통과한 행동만 실행.
+- 도구 실패 시 상태 유지와 완료 행동의 중복 실행 차단.
+- 검증된 실행 결과를 캐릭터 대사로 변환.
+- 성공·실패·누락·미지원·중복·상태 불변을 확인하는 자동 테스트 13개 통과.
 
-첫 미션: 캐릭터 하나의 페르소나, 상태 필드, 허용 행동과 예시 대화를 정리합니다.
+현재 결과는 결정론적 상태·행동 엔진 범위입니다. LLM, RAG, 장기 기억, 사용자별 격리와 API는 아직 구현하지 않았습니다.
+
+[엔진 코드](https://github.com/lightleaping/world-character-engine/blob/main/character_engine.py) · [자동 테스트](https://github.com/lightleaping/world-character-engine/blob/main/test_character_engine.py) · [1회차 학습 설명](https://github.com/lightleaping/world-character-engine/blob/main/docs/ROUND-01-LEARNING-GUIDE.md)
 
 [전체 현황](../STATUS.md) · [기록 양식](../TEMPLATES.md)

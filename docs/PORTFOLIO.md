@@ -70,16 +70,17 @@ Python 기반 AI 서비스·Backend 개발을 목표로, 네 프로젝트를 통
 
 ## 04. 세계관 AI 캐릭터 엔진
 
-**LLM · RAG · Agent · 기억·상태·행동 설계**
+**Python · 상태 관리 · 행동 검증 · LLM/Agent 기반 설계**
 
 대화가 이어져도 캐릭터의 설정과 기억이 유지되고, 말로 제안한 행동이 실제 세계 상태와 일치하도록 만드는 프로젝트입니다.
 
 - **입력:** 사용자 발화, 페르소나, 기억, 현재 세계 상태
 - **목표 출력:** 캐릭터 응답, 검증된 행동 결과, 갱신된 상태와 기억
 - **적용 예정 기술:** Python · LLM · RAG · FastAPI, 필요에 따라 LangGraph
-- **첫 작업:** 캐릭터 1명의 상태 필드·허용 행동·예시 대화 정의.
+- **1회차 결과:** 상태·행동 엔진 구현, 실패·중복·상태 불변을 포함한 자동 테스트 13개 통과.
+- **다음 작업:** 사용자 입력에서 구조화된 행동 제안을 생성하고 OpenAI API와 연결.
 
-XR은 제외합니다. LLM의 행동 제안은 프로그램이 유효성을 검사한 뒤 실행하도록 설계합니다.
+현재 구현은 Python 결정론적 엔진 범위이며 LLM·RAG·장기 기억은 아직 연결하지 않았습니다. XR은 제외합니다. 이후에도 LLM의 행동 제안은 프로그램이 유효성을 검사한 뒤 실행하도록 설계합니다.
 
 [프로젝트 저장소](https://github.com/lightleaping/world-character-engine) · [진행 기록](https://github.com/lightleaping/world-character-engine/blob/main/PROGRESS.md)
 

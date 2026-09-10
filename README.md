@@ -13,14 +13,14 @@
 
 ## Projects
 
-**현재 단계: 설계·재구현 준비.** 아래 기능은 구현 목표이며, 실행 결과와 성능은 검증 후 추가합니다.
+**현재 단계: 프로젝트별 순차 구현·검증.** 확인된 코드와 테스트만 완료 결과로 표시하고, 예정 기능은 구현 후 갱신합니다.
 
 | 분야 | 프로젝트 | 목표 |
 |---|---|---|
 | **AI 서비스** | [Structured Bloom](https://github.com/lightleaping/structured-bloom-streamlit) | 기분·시간에 맞는 활동 추천과 이력 관리 |
 | **딥러닝 · 분석 Agent** | [사례 기반 이상탐지](https://github.com/lightleaping/case-based-anomaly-agent) | 오류 검출부터 원인 후보 분석·설명·보고서 생성 |
 | **Vision 응용** | [코디 추천·보드](https://github.com/lightleaping/fashion-outfit-board) | 실제 상품 이미지로 의류 조합 추천·코디 보드 출력 |
-| **LLM · RAG · Agent** | [세계관 캐릭터 엔진](https://github.com/lightleaping/world-character-engine) | 기억과 상태에 맞는 응답·행동의 검증과 실행 |
+| **LLM · Agent 설계** | [세계관 캐릭터 엔진](https://github.com/lightleaping/world-character-engine) | 1회차 상태·행동 검증 엔진과 13개 테스트 완료 |
 
 ## Development Approach
 
@@ -44,4 +44,4 @@
 
 </details>
 
-<sub>2026-09-10 업데이트 · 프로젝트의 계획과 검증된 결과를 구분해 공개합니다.</sub>
+<sub>2026-09-11 업데이트 · 프로젝트의 계획과 검증된 결과를 구분해 공개합니다.</sub>
