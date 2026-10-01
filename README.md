@@ -57,7 +57,7 @@ API 요청·응답 흐름, Validation, 오류 처리와 직접 구현 범위를 
 
 **Tech:** React · JavaScript · FastAPI · OpenAI API · Pydantic
 
-[Repository](https://github.com/lightleaping/s23.aiweb2026.site)
+[Repository](https://github.com/lightleaping/structured-bloom-ai-service)
 
 ---
 
