@@ -1,26 +1,27 @@
 ![AI Service Portfolio — Data, Model, Service](assets/portfolio-header.svg)
 
-# 김수진 | AI 개발자
+# 김수진 | AI 서비스 개발
 
 **AI 기능을 실제 서비스로 연결하는 AI 서비스 개발자를 지향합니다.**
 
-학교와 프로젝트를 통해 AI·SW 기능을 단위별로 구현하고 실습해 왔으며,
-현재는 데이터·모델/LLM·API·DB·도구를 하나의 서비스 흐름으로 연결하고
-검증하는 역량을 집중적으로 강화하고 있습니다.
+학교와 프로젝트를 통해 데이터 처리, AI·SW 기능, 웹·API를 단위별로 구현하고 실습해 왔습니다.
+
+현재는 과거 프로젝트와 실습을 다시 실행·수정·검증하면서,
+데이터·모델/LLM·API·DB·도구를 하나의 서비스 흐름으로 연결하는 역량을 강화하고 있습니다.
 
 ## Current Focus
 
 - Generative AI / LLM
-- AI Agent / Tool Use
 - Backend / API
-- Manufacturing AI
+- AI Agent / Tool Use / Evidence
+- Manufacturing Data / AI
 
 ---
 
 ## Featured Projects
 
 ### 01. Manufacturing MCP Agent
-**Status: Implemented**
+**Status: Implemented · Re-validation Priority**
 
 제조 현장의 자연어 질문을 목적에 맞는 데이터 분석 기능으로 연결하고,
 분석 결과와 근거 데이터를 함께 반환하는 Agent API입니다.
@@ -32,10 +33,13 @@
 - 동일 분석 기능을 4개 MCP Tool로 제공
 - FastAPI 기반 Agent API
 - Agent Flow · Tool · Model 핵심 테스트 9개
+- 분석 결과와 함께 사용한 Tool과 Evidence 반환
 
 **Tech:** Python · FastAPI · pandas · Pydantic · LangGraph · FastMCP · pytest
 
-> 현재 Intent와 Answer 생성에는 외부 LLM을 사용하지 않습니다.
+> 현재 Intent와 Answer 생성에는 외부 LLM을 사용하지 않습니다.  
+> Agent API는 MCP Client를 통해 MCP Server를 호출하는 구조가 아니라,
+> Python 분석 Tool을 직접 실행하며 FastMCP Server는 동일 분석 기능을 별도로 제공합니다.
 
 [Repository](https://github.com/lightleaping/manufacturing-mcp-agent)
 
@@ -49,11 +53,18 @@ AI웹융합 과제에서 구현한 React + FastAPI + OpenAI API 기반 웹 서�
 `React → FastAPI → OpenAI → Structured JSON → Pydantic Validation → UI`
 
 사용자의 상태와 사용 가능한 시간을 입력받고,
-LLM 응답을 구조화된 JSON으로 받아 Pydantic으로 검증한 뒤
+LLM 응답을 구조화된 JSON으로 받아 Backend에서 검증한 뒤
 React 화면에 결과를 표시하도록 구성했습니다.
 
-현재 과거 구현 코드를 다시 실행하면서
-API 요청·응답 흐름, Validation, 오류 처리와 직접 구현 범위를 재검증하고 있습니다.
+현재 과거 구현 코드를 다시 실행하면서 다음 내용을 재검증하고 있습니다.
+
+- React와 FastAPI의 HTTP 요청·응답 흐름
+- OpenAI API 호출
+- Structured JSON 처리
+- Pydantic Validation
+- 오류 처리
+- Frontend와 Backend 설정 분리
+- 직접 구현 범위와 현재 동작 범위
 
 **Tech:** React · JavaScript · FastAPI · OpenAI API · Pydantic
 
@@ -78,9 +89,48 @@ Agent·Backend 영역을 담당하고 있습니다.
 
 공개 저장소에는 Agent·Backend 연결을 위한
 규칙 기반 사건 분석 Draft와 테스트·예제 JSON을 포함하고 있습니다.
-실제 AI 이상탐지·TF-IDF 검색·LLM 연결은 아직 진행 중입니다.
+
+현재 공개 구현과 전체 목표를 구분합니다.
+
+**현재 공개 구현**
+- 규칙 기반 사건 분석 Draft
+- 입력·출력 JSON 예제
+- Evidence 기반 분석 결과 구조
+- Unit Test
+
+**진행 중인 전체 프로젝트 범위**
+- AI 기반 이상탐지
+- 사례 / Runbook 검색
+- Agent 기반 원인 후보 분석
+- Backend 연결
+- 사건 분석 결과 제공
+
+> 실제 AI 이상탐지, TF-IDF 검색, LLM 연결과 전체 End-to-End 통합은 아직 진행 중입니다.
 
 [Repository](https://github.com/lightleaping/case-based-anomaly-agent)
+
+---
+
+## Smart Manufacturing Training
+
+**2026 스마트제조 전문인력 육성사업 제조AI 직무교육 참여 중**
+
+제조 시스템의 이름을 암기하기보다,
+생산 문제를 데이터와 업무 흐름으로 연결하는 관점에서 학습하고 있습니다.
+
+현재 교육에서 다루고 있는 주요 내용은 다음과 같습니다.
+
+- ISA-95 기반 제조 활동과 데이터 흐름
+- ERP / SCM / PLM / MES / POP / QMS / CMMS / WMS의 역할
+- Sensor · Actuator · PLC · DCS와 실제 공정의 관계
+- Order · Work Order · Lot · Equipment · Inspection 등 추적성 식별키
+- 제조 문제를 `Problem → Data → System → Action → KPI`로 구조화하는 방법
+- 확인된 사실과 원인 가설의 분리
+- 제조 데이터와 RDB / 시계열 데이터 / 문서 지식의 역할 구분
+- 생성형 AI 답변의 사실·가정·근거·추가 확인사항 검토
+
+교육 내용을 단순 수료 기록으로 남기기보다,
+개발 직무 관점에서 데이터 구조와 Backend 기능으로 직접 확장·검증하는 과정을 진행하고 있습니다.
 
 ---
 
@@ -113,59 +163,144 @@ Agent·Backend 영역을 담당하고 있습니다.
 
 ## Technical Experience
 
-기술 경험은 현재 프로젝트에서 확인한 범위와
-학교·교육에서 실습한 경험을 구분해 정리합니다.
+현재 프로젝트에서 확인할 수 있는 구현 경험과
+학교·교육에서 수행한 실습 경험을 구분해 정리합니다.
 
-### Project Experience
+### Project / Implementation Evidence
 
-현재 프로젝트의 코드와 동작을 기준으로 설명할 수 있는 기술입니다.
+현재 공개 프로젝트에서 실제 사용되거나 구현된 기술입니다.
 
-- Python
-- FastAPI
-- pandas
-- Pydantic
-- LangGraph
-- FastMCP
-- pytest
+- **Python** — 데이터 처리, 상태·도구 로직, API 구현
+- **FastAPI** — Endpoint와 Backend API 구성
+- **Pydantic** — Request / Response Schema와 Validation
+- **pandas** — 제조 데이터 집계·분석 Tool
+- **LangGraph** — State 기반 Agent Workflow
+- **FastMCP** — Python 분석 기능을 MCP Tool로 노출
+- **pytest** — 핵심 기능과 Workflow 검증
+- **React / JavaScript** — AI Web Service Frontend
+- **OpenAI API** — Structured Response 기반 AI 기능 연결
 
-### Practice Experience / Review
+### Practice Experience / Re-validation
 
-학교·교육에서 기능 단위로 실습한 경험이 있으며,
-현재 다시 실행하고 원리를 설명할 수 있도록 복습하고 있습니다.
+학교·교육에서 직접 실행하거나 구현한 경험이 있으며,
+현재 대표 사례를 다시 실행하고 원리를 설명할 수 있도록 복습하고 있습니다.
 
-- SQL / DB
-- Machine Learning
-- PyTorch
-- Vision / OpenCV / YOLO
-- NLP
-- Generative AI / Function Calling
+- **Data Analysis**
+  - DataFrame
+  - groupby / aggregation
+  - merge / concat
+  - 결측치·이상치 처리
+  - 데이터 시각화
+
+- **Machine Learning**
+  - Classification / Regression
+  - SVM / KNN / Logistic Regression
+  - Decision Tree / RandomForest / Ensemble
+  - Clustering / PCA
+  - Model Evaluation
+
+- **PyTorch / Deep Learning**
+  - Tensor
+  - Dataset / DataLoader
+  - nn.Module
+  - Training Loop
+  - MLP / CNN
+  - AutoEncoder
+
+- **Computer Vision**
+  - CNN / ResNet
+  - Image Classification
+  - Segmentation
+  - OpenCV / YOLO 실습
+
+- **NLP**
+  - BoW
+  - TF-IDF
+  - Word Embedding
+  - Word2Vec / FastText
+  - LDA
+
+- **SQL / DB**
+  - SELECT / WHERE
+  - GROUP BY
+  - JOIN
+  - 데이터 저장·조회와 관계형 데이터 구조
+
+- **Generative AI**
+  - OpenAI API
+  - Structured Output
+  - Function / Tool Calling 실습
+  - RAG 구조 설계 및 검색 흐름 학습
+
+> Practice Experience는 수업·교육·과제에서 기능을 직접 실행하거나 구현해본 경험을 의미하며,
+> 현재 모든 영역을 독립적으로 숙련했다는 의미로 사용하지 않습니다.
 
 ---
 
-## Current Learning
+## Current Re-validation
 
-현재 학교 수업과 2026 스마트제조 전문인력 육성사업 교육을 통해
-기존 실습 경험을 다시 확인하고 서비스 개발 흐름으로 연결하고 있습니다.
+과거 프로젝트와 수업 실습을 그대로 현재 역량으로 간주하지 않고,
+다음 기준으로 다시 확인하고 있습니다.
 
-`Data → AI / LLM → API / DB → Tool → Evidence → Test`
+`Run → Explain → Modify → Test → Document`
 
-학습 코드를 그대로 포트폴리오에 사용하는 대신,
-직접 다시 실행하고 수정·검증한 범위부터 GitHub에 정리할 예정입니다.
+현재 우선적으로 재검증하는 영역:
+
+### LLM Web Service
+`React → FastAPI → OpenAI → Structured Output → Validation`
+
+### Agent Backend
+`Intent → Router → Tool → Evidence → Response`
+
+### Manufacturing Data
+`Manufacturing Data → SQL / DB → Traceability → API`
+
+### AI Foundations
+`Data → ML / PyTorch / Vision / NLP`
+
+재실행·수정·검증한 범위부터 현재 프로젝트 경험으로 반영합니다.
 
 ---
 
 ## Development Approach
 
+프로젝트에서는 기능의 개수보다
+입력부터 결과와 검증까지의 흐름을 확인하는 것을 중요하게 생각합니다.
+
+`Data → AI / LLM → API / DB → Tool → Evidence → Test`
+
 - 구현된 기능과 계획 단계 기능을 구분합니다.
-- 실행 결과와 성능은 검증 조건과 함께 기록합니다.
+- 교육·수업 예제와 개인 구현 범위를 구분합니다.
+- 실행 결과와 성능 수치는 검증 조건과 함께 기록합니다.
+- AI가 생성한 결과와 실제 데이터 근거를 구분합니다.
 - 과거 실습은 다시 실행하고 설명 가능한 범위부터 현재 역량으로 반영합니다.
-- AI 기능뿐 아니라 입력부터 API·도구·근거·검증까지 이어지는 흐름을 확인합니다.
+- 모델이나 LLM 자체뿐 아니라 API·DB·도구·검증까지 연결되는 흐름을 확인합니다.
 
 ---
 
-## Relevant Coursework
+## Education & Practice Background
 
-Programming / SW · Web / Backend / DB · Data / ML · Deep Learning / Vision · NLP / AI Service
+### 동양미래대학교 인공지능소프트웨어학과
+
+- Programming / Software
+- Web / Backend / Database
+- Data Analysis / Machine Learning
+- Deep Learning / Computer Vision
+- Natural Language Processing
+- Generative AI
+- AI Service Analysis & Design
+
+### 2026 스마트제조 전문인력 육성사업
+
+- Smart Manufacturing
+- Manufacturing Data
+- Manufacturing System / Traceability
+- AI Service Development
+- Manufacturing AI Practice
+
+### Certification
+
+- ADsP · 데이터분석 준전문가
 
 ---
 
@@ -173,4 +308,4 @@ Programming / SW · Web / Backend / DB · Data / ML · Deep Learning / Vision ·
 
 [GitHub · lightleaping](https://github.com/lightleaping) · [workingskyroad@gmail.com](mailto:workingskyroad@gmail.com)
 
-<sub>Updated 2026-10-01 · 구현·실습·진행 중인 범위를 구분해 공개합니다.</sub>
+<sub>Updated 2026-10-02 · 구현·실습·진행 중인 범위를 구분하고, 재검증한 경험부터 현재 역량으로 반영합니다.</sub>
