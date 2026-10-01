@@ -74,10 +74,11 @@ API 요청·응답 흐름, Validation, 오류 처리와 직접 구현 범위를 
 Agent·Backend 영역을 담당하고 있습니다.
 
 현재 팀별 모듈을 구현·검증하는 단계이며,
-전체 End-to-End 연결은 아직 검증되지 않았습니다.
+전체 End-to-End 연결은 아직 완료되지 않았습니다.
 
-현재 공개 저장소에는 본인이 담당한 범위와
-공개 가능한 설계·진행 상태부터 순차적으로 반영하고 있습니다.
+공개 저장소에는 Agent·Backend 연결을 위한
+규칙 기반 사건 분석 Draft와 테스트·예제 JSON을 포함하고 있습니다.
+실제 AI 이상탐지·TF-IDF 검색·LLM 연결은 아직 진행 중입니다.
 
 [Repository](https://github.com/lightleaping/case-based-anomaly-agent)
 
