@@ -46,27 +46,35 @@
 ---
 
 ### 02. Structured Bloom
-**Status: Re-validation in Progress**
+**Status: Local Re-validation Complete**
 
 AI웹융합 과제에서 구현한 React + FastAPI + OpenAI API 기반 웹 서비스입니다.
 
-`React → FastAPI → OpenAI → Structured JSON → Pydantic Validation → UI`
+`React → FastAPI → OpenAI → JSON Parsing → Pydantic Validation → UI`
 
 사용자의 상태와 사용 가능한 시간을 입력받고,
-LLM 응답을 구조화된 JSON으로 받아 Backend에서 검증한 뒤
+LLM 응답을 JSON으로 받아 Backend에서 구조를 검증한 뒤
 React 화면에 결과를 표시하도록 구성했습니다.
 
-현재 과거 구현 코드를 다시 실행하면서 다음 내용을 재검증하고 있습니다.
+최근 기존 구현을 다시 실행·수정하며 다음 범위를 직접 재검증했습니다.
 
 - React와 FastAPI의 HTTP 요청·응답 흐름
-- OpenAI API 호출
-- Structured JSON 처리
-- Pydantic Validation
-- 오류 처리
-- Frontend와 Backend 설정 분리
-- 직접 구현 범위와 현재 동작 범위
+- 실제 OpenAI API 호출
+- JSON Parsing과 Pydantic Response Validation
+- Frontend ↔ Backend End-to-End 흐름
+- CORS 동작
+- Frontend API URL 환경별 분리
+- Production Build 및 ESLint
+- Hugging Face 배포 환경과 실행 로그 확인
 
-**Tech:** React · JavaScript · FastAPI · OpenAI API · Pydantic
+Frontend API URL을 `VITE_API_BASE_URL`로 분리해
+개발 환경에서는 로컬 FastAPI를 사용하고,
+Production Build에서는 기존 Hugging Face Backend를 기본값으로 사용하도록 수정했습니다.
+
+> 현재 GitHub Backend와 Hugging Face에 배포된 Backend는 서로 다른 코드 버전이며,
+> 배포 버전 차이는 현재 프로젝트의 제한사항으로 문서화했습니다.
+
+**Tech:** React · JavaScript · FastAPI · OpenAI API · Pydantic · Vite
 
 [Repository](https://github.com/lightleaping/structured-bloom-ai-service)
 
@@ -246,8 +254,11 @@ Agent·Backend 영역을 담당하고 있습니다.
 
 현재 우선적으로 재검증하는 영역:
 
-### LLM Web Service
-`React → FastAPI → OpenAI → Structured Output → Validation`
+### LLM Web Service — Re-validated
+`React → FastAPI → OpenAI → JSON Parsing → Pydantic Validation → UI`
+
+Structured Bloom을 기준으로 로컬 실행, 실제 OpenAI API 호출,
+Frontend ↔ Backend End-to-End 흐름, 코드 수정, Build·Lint까지 재검증했습니다.
 
 ### Agent Backend
 `Intent → Router → Tool → Evidence → Response`
@@ -308,4 +319,4 @@ Agent·Backend 영역을 담당하고 있습니다.
 
 [GitHub · lightleaping](https://github.com/lightleaping) · [workingskyroad@gmail.com](mailto:workingskyroad@gmail.com)
 
-<sub>Updated 2026-10-02 · 구현·실습·진행 중인 범위를 구분하고, 재검증한 경험부터 현재 역량으로 반영합니다.</sub>
+<sub>Updated 2026-10-04 · 구현·실습·진행 중인 범위를 구분하고, 재검증한 경험부터 현재 역량으로 반영합니다.</sub>
